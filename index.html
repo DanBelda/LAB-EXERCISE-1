@@ -4,390 +4,302 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Portfolio</title>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth; /* Smooth scrolling */
-    }
-    header {
-      background: #343a40;
-      color: white;
-      padding: 100px 0;
-    }
-    section {
-      padding: 80px 0;
-      min-height: 100vh; /* Each section fills screen */
-    }
-    footer {
-      background: #343a40;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    /* === Reusable Background Image for Sections === */
-    section.bg-image {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: white; /* default white text */
-      z-index: 1;
-    }
-
-    section.bg-image::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5); /* overlay */
-      z-index: -1;
-    }
-
-    section.bg-image > * {
-      position: relative;
-      z-index: 2;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
- <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: #343a40;">
-  <div class="container">
-    <!-- Brand -->
-    <a class="navbar-brand fw-bold text-warning" href="#">
-      <i class="fas fa-code me-2"></i> My Portfolio
-    </a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#top">
+        <i class="fas fa-code me-2"></i> My Portfolio
+      </a>
 
-    <!-- Toggler -->
-    <button class="navbar-toggler text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item mx-1">
-          <a class="nav-link btn btn-outline-warning fw-bold rounded-pill px-3" href="#about">
-            <i class="fas fa-user me-1"></i> About Me
-          </a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link btn btn-outline-warning fw-bold rounded-pill px-3" href="#skills">
-            <i class="fas fa-cogs me-1"></i> Skills
-          </a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link btn btn-outline-warning fw-bold rounded-pill px-3" href="#projects">
-            <i class="fas fa-project-diagram me-1"></i> Projects
-          </a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link btn btn-outline-warning fw-bold rounded-pill px-3" href="#contact">
-            <i class="fas fa-envelope me-1"></i> Contact
-          </a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item mx-1">
+            <a class="nav-link btn" href="#about"><i class="fas fa-user me-1"></i> About Me</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link btn" href="#skills"><i class="fas fa-cogs me-1"></i> Skills</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link btn" href="#experience"><i class="fas fa-briefcase me-1"></i> Work Experience</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link btn" href="#experience"><i class="fas fa-certificate me-1"></i> Certifications</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link btn" href="#projects"><i class="fas fa-project-diagram me-1"></i> Projects</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link btn" href="#contact"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-
-<!-- Optional CSS for smoother hover effect -->
-<style>
-  .navbar .btn-outline-warning {
-    transition: all 0.3s ease;
-  }
-  .navbar .btn-outline-warning:hover {
-    background-color: #ffc107;
-    color: #343a40;
-  }
-</style>
-
-
+  </nav>
 
   <!-- Hero / Header -->
-<header class="text-white d-flex align-items-center" 
-  style="min-height: 100vh; 
-         background: url('https://img.pikbest.com/wp/202344/light-gray-background-design-abstract-grey-color-dark-black-and-with-old-wall-texture-of-cement-illuminated-by-white-gradient_9898524.jpg!w700wp') no-repeat center center/cover; 
-         position: relative;">
+  <header class="text-white d-flex align-items-center" id="top">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-4">
+        <div class="col-md-7 text-center text-md-start">
+          <p class="eyebrow">INFORMATION TECHNOLOGY STUDENT</p>
+          <h1 class="display-2 fw-bold">Hello, I'm <br> Dan Aeron P. Belda</h1>
+          <p class="lead">Aspiring Web Developer | Student Portfolio</p>
+        </div>
 
-  <!-- Dark overlay for readability -->
-  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.6);"></div>
-
-  <div class="container position-relative">
-    <div class="row align-items-center">
-      
-      <!-- Text -->
-      <div class="col-md-6 text-center text-md-start">
-        <h1 class="display-2 fw-bold">Hello, I'm <br> Dan Aeron P. Belda</h1>
-        <p class="lead">Aspiring Web Developer | Student Portfolio</p>
-      </div>
-      
-      <!-- Photo -->
-      <div class="col-md-6 text-center">
-        <img src="danpic.jpg" alt="My Photo" 
-             class="img-fluid shadow-lg" 
-             style="max-width: 350px;">
-      </div>
-      
-    </div>
-  </div>
-</header>
-
-
-
-</header>
-   <!-- About Section with Background Image -->
-<section id="about" class="bg-image" 
-         style="padding: 80px 0; 
-                background-image: url('https://img.pikbest.com/wp/202344/light-gray-background-design-abstract-grey-color-dark-black-and-with-old-wall-texture-of-cement-illuminated-by-white-gradient_9898524.jpg!w700wp'); 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat; 
-                position: relative;">
-  <!-- Overlay for readability -->
-  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); z-index:1;"></div>
-
-  <div class="container" style="position: relative; z-index:2;">
-    <h2 class="text-center mb-4 fw-bold text-warning">About Me</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-8 col-md-10">
-        <div class="p-4 rounded-4 shadow h-100"
-             style="background: transparent; 
-                    border: 2px solid rgba(255,255,255,0.6); 
-                    box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <p class="lead text-white">
-            I am a passionate student of web development. I enjoy creating websites and applications that are both attractive and helpful. 
-            I constantly work to develop my abilities by investigating new technologies and following the most recent developments in IT. 
-            Beyond software, I like working with people, resolving challenging issues, and transforming imaginative concepts into practical digital solutions. 
-            My objective is to establish a solid foundation in development and cybersecurity, getting ready for a future in IT where I can make a significant contribution to security and innovation.
-          </p>
-
-          <ul class="list-unstyled mt-4 text-white">
-            <li class="mb-3">
-              <i class="fas fa-user text-primary me-2"></i>
-              <strong>Age:</strong> 20
-            </li>
-            <li class="mb-3">
-              <i class="fas fa-map-marker-alt text-danger me-2"></i>
-              <strong>Location:</strong> San Pablo, Laguna
-            </li>
-            <li class="mb-3">
-              <i class="fas fa-graduation-cap text-success me-2"></i>
-              <strong>Year Level:</strong> 3rd Year
-            </li>
-            <li class="mb-3">
-              <i class="fas fa-laptop-code text-warning me-2"></i>
-              <strong>Course:</strong> BS Information Technology Major in Networking
-            </li>
-          </ul>
+        <div class="col-md-5 text-center">
+          <img src="danpic.jpg" alt="My Photo" class="img-fluid shadow-lg profile-photo">
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
+  <!-- About Section -->
+  <section id="about" class="resume-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="about-card">
+            <p>
+              Information Technology student majoring in Networking at Batangas State University, with hands-on experience in computer software and hardware development, mobile app development, and network development. I have worked on a capstone project that combines machine learning, an Android application built with Flutter, and Firebase cloud services, and I enjoy turning practical problems into working systems. I am detail-oriented, quick to learn new tools, and comfortable working in a team.
+            </p>
 
+            <div class="row g-3 mt-4">
+              <div class="col-md-6 col-lg-3">
+                <div class="info-item"><i class="fas fa-user text-primary"></i><strong>Age:</strong> 20</div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="info-item"><i class="fas fa-map-marker-alt text-danger"></i><strong>Location:</strong> San Pablo, Laguna</div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="info-item"><i class="fas fa-graduation-cap text-success"></i><strong>Year Level:</strong> 3rd Year</div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="info-item"><i class="fas fa-laptop-code text-warning"></i><strong>Course:</strong> BSIT major in Networking</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Skills Section -->
-<section id="skills" class="bg-image" 
-         style="padding: 80px 0; 
-                background-image: url('https://img.pikbest.com/wp/202344/light-gray-background-design-abstract-grey-color-dark-black-and-with-old-wall-texture-of-cement-illuminated-by-white-gradient_9898524.jpg!w700wp'); 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat; 
-                position: relative;">
-  <!-- Overlay for readability -->
-  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.3); z-index:1;"></div>
+  <section id="skills" class="resume-section alt-section">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="row justify-content-center g-4">
 
-  <div class="container" style="position: relative; z-index:2;">
-    <h2 class="text-center fw-bold mb-5 text-warning">My Skills</h2>
+        <div class="col-md-6 col-lg-4">
+          <div class="resume-card h-100">
+            <div class="card-body">
+              <h4 class="card-title"><i class="fas fa-laptop-code me-2"></i> Programming Languages</h4>
+              <div class="skill-badges">
+                <span class="badge badge-secondary"><i class="fas fa-code me-2"></i> C++</span>
+                <span class="badge badge-warning"><i class="fab fa-java me-2"></i> Java</span>
+                <span class="badge badge-info"><i class="fas fa-database me-2"></i> PHP</span>
+                <span class="badge badge-danger"><i class="fab fa-html5 me-2"></i> HTML / CSS</span>
+                <span class="badge badge-success"><i class="fab fa-js me-2"></i> JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="row justify-content-center g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="resume-card h-100">
+            <div class="card-body">
+              <h4 class="card-title"><i class="fas fa-tools me-2"></i> Tools & Workflow</h4>
+              <div class="skill-badges">
+                <span class="badge badge-dark"><i class="fab fa-github me-2"></i> GitHub</span>
+                <span class="badge badge-primary"><i class="fas fa-code me-2"></i> VS Code</span>
+                <span class="badge badge-purple"><i class="fab fa-bootstrap me-2"></i> Bootstrap</span>
+                <span class="badge badge-cyan"><i class="fas fa-paint-brush me-2"></i> Canva</span>
+                <span class="badge badge-warning"><i class="fas fa-laptop-code me-2"></i> Eclipse</span>
+                <span class="badge badge-red"><i class="fab fa-google me-2"></i> Google Workspace</span>
+                <span class="badge badge-muted"><i class="fas fa-comment me-2"></i> Slack</span>
+                <span class="badge badge-green"><i class="fab fa-discord me-2"></i> Discord</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <!-- Programming Languages -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card text-center h-100" 
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); border-radius: 1rem; box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <div class="card-body text-white">
-            <h4 class="card-title mb-4">
-              <i class="fas fa-laptop-code me-2"></i> Programming Languages
-            </h4>
-            <div class="d-flex justify-content-center flex-wrap gap-3">
-              <span class="badge bg-secondary text-white p-3 shadow-sm"><i class="fas fa-code me-2"></i> C++</span>
-              <span class="badge bg-warning text-dark p-3 shadow-sm"><i class="fab fa-java me-2"></i> Java</span>
-              <span class="badge bg-info text-dark p-3 shadow-sm"><i class="fas fa-database me-2"></i> PHP</span>
-              <span class="badge bg-danger text-white p-3 shadow-sm"><i class="fab fa-html5 me-2"></i> HTML / CSS</span>
-              <span class="badge bg-success text-white p-3 shadow-sm"><i class="fab fa-js me-2"></i> JavaScript</span>
+        <div class="col-md-6 col-lg-4">
+          <div class="resume-card h-100">
+            <div class="card-body">
+              <h4 class="card-title"><i class="fas fa-lightbulb me-2"></i> Other Skills</h4>
+              <ul class="skill-list">
+                <li>✅ Teamwork & Collaboration</li>
+                <li>🧩 Problem-Solving & Critical Thinking</li>
+                <li>🎨 Creativity & Innovation</li>
+                <li>⏳ Adaptability & Time Management</li>
+              </ul>
+              <small>
+                These skills complement my technical knowledge and allow me to work effectively in group projects and real-world situations.
+              </small>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Tools & Workflow -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card text-center h-100" 
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); border-radius: 1rem; box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <div class="card-body text-white">
-            <h4 class="card-title mb-4">
-              <i class="fas fa-tools me-2"></i> Tools & Workflow
-            </h4>
-            <div class="d-flex justify-content-center flex-wrap gap-3">
-              <span class="badge bg-dark text-white p-3 shadow-sm"><i class="fab fa-github me-2"></i> GitHub</span>
-              <span class="badge bg-primary text-white p-3 shadow-sm"><i class="fas fa-code me-2"></i> VS Code</span>
-              <span class="badge text-white p-3 shadow-sm" style="background:#7952b3;"><i class="fab fa-bootstrap me-2"></i> Bootstrap</span>
-              <span class="badge bg-info text-dark p-3 shadow-sm"><i class="fas fa-paint-brush me-2"></i> Canva</span>
-              <span class="badge bg-warning text-dark p-3 shadow-sm"><i class="fas fa-laptop-code me-2"></i> Eclipse</span>
-              <span class="badge bg-danger text-white p-3 shadow-sm"><i class="fab fa-google me-2"></i> Google Workspace</span>
-              <span class="badge bg-secondary text-white p-3 shadow-sm"><i class="fas fa-comment me-2"></i> Slack</span>
-              <span class="badge bg-success text-white p-3 shadow-sm"><i class="fab fa-discord me-2"></i> Discord</span>
+  <!-- Experience & Certifications Section with Tabs -->
+  <section id="experience" class="resume-section">
+    <div class="container">
+      <h2 class="section-title">Experience & Certifications</h2>
+      <div class="experience-tabs">
+        <ul class="nav nav-tabs" id="experienceTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="work-tab" data-bs-toggle="tab" data-bs-target="#workExperience" type="button" role="tab" aria-controls="workExperience" aria-selected="true">
+              <i class="fas fa-briefcase me-2"></i>Work Experience
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="cert-tab" data-bs-toggle="tab" data-bs-target="#certifications" type="button" role="tab" aria-controls="certifications" aria-selected="false">
+              <i class="fas fa-certificate me-2"></i>Certifications
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="workExperience" role="tabpanel" aria-labelledby="work-tab">
+            <div class="resume-card">
+              <div class="card-body">
+                <h4>Capstone and Systems Development Experience</h4>
+                <p class="job-meta"><strong>Batangas State University</strong> | 2024 - 2025</p>
+                <ul class="experience-list">
+                  <li>Developed a machine learning-powered capstone project integrating an Android mobile app built with Flutter and Firebase cloud services.</li>
+                  <li>Worked on practical problem-solving by transforming real-world requirements into functional mobile and software solutions.</li>
+                  <li>Collaborated with team members to design, test, and refine features for usability, performance, and reliability.</li>
+                  <li>Supported project documentation, data management, and implementation workflows for a complete system prototype.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="certifications" role="tabpanel" aria-labelledby="cert-tab">
+            <div class="resume-card">
+              <div class="card-body">
+                <h4>Professional and Technical Certifications</h4>
+                <div class="certification-list">
+                  <div class="cert-item">
+                    <i class="fas fa-award"></i>
+                    <div>
+                      <strong>Flutter Mobile App Development</strong>
+                      <p>Focus on mobile application design, UI development, and app deployment concepts.</p>
+                    </div>
+                  </div>
+                  <div class="cert-item">
+                    <i class="fas fa-award"></i>
+                    <div>
+                      <strong>Firebase Cloud Services</strong>
+                      <p>Experience in implementing cloud-based storage, authentication, and application backend workflows.</p>
+                    </div>
+                  </div>
+                  <div class="cert-item">
+                    <i class="fas fa-award"></i>
+                    <div>
+                      <strong>Networking and IT Fundamentals</strong>
+                      <p>Applied principles in networking, system troubleshooting, and computer hardware and software operations.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Other Skills -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card text-center h-100" 
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); border-radius: 1rem; box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <div class="card-body text-white">
-            <h4 class="card-title mb-3">
-              <i class="fas fa-lightbulb me-2"></i> Other Skills
-            </h4>
-            <p>Aside from my technical expertise, I also possess other valuable skills such as:</p>
-<ul class="list-group list-group-flush mx-auto" style="max-width: 320px;">
-  <li class="list-group-item border-0 text-center text-white" style="background: transparent;">✅ Teamwork & Collaboration</li>
-  <li class="list-group-item border-0 text-center text-white" style="background: transparent;">🧩 Problem-Solving & Critical Thinking</li>
-  <li class="list-group-item border-0 text-center text-white" style="background: transparent;">🎨 Creativity & Innovation</li>
-  <li class="list-group-item border-0 text-center text-white" style="background: transparent;">⏳ Adaptability & Time Management</li>
-</ul>
+  <!-- Projects Section -->
+  <section id="projects" class="resume-section alt-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-6">
+          <div class="resume-card project-card h-100">
+            <div class="card-body">
+              <h5 class="project-title">Smart Parking System</h5>
+              <p>
+                Me and my team are planning to create a Java-based smart parking system that helps users find available parking spots in real-time. The application features a user-friendly GUI and efficient system logic to improve parking management and reduce time spent searching for space.
+              </p>
+              <p><strong>Languages & Frameworks:</strong> Java, JavaScript, CSS, HTML, Eclipse IDE</p>
+            </div>
+          </div>
+        </div>
 
-            <small class="d-block mt-3 text-white">
-              💡 These skills complement my technical knowledge and allow me to work effectively in group projects and real-world situations.
-            </small>
+        <div class="col-md-6">
+          <div class="resume-card project-card h-100">
+            <div class="card-body">
+              <h5 class="project-title">Medical Center Patient and Staff Management System</h5>
+              <p>
+                Our team developed a complete management system for a medical center using Java. The system includes modules for patient registration, appointment scheduling, staff management, and medical records handling to support efficient operations in healthcare facilities.
+              </p>
+              <p><strong>Languages & Frameworks:</strong> Java, JavaScript, CSS, HTML, MySQL, Eclipse IDE</p>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-
-
-<!-- Projects Section -->
-<section id="projects" class="bg-image" 
-         style="padding: 80px 0; 
-                background-image: url('https://img.pikbest.com/wp/202344/light-gray-background-design-abstract-grey-color-dark-black-and-with-old-wall-texture-of-cement-illuminated-by-white-gradient_9898524.jpg!w700wp'); 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat; 
-                position: relative;">
-  <!-- Overlay for readability -->
-  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); z-index:1;"></div>
-
-  <div class="container" style="position: relative; z-index:2;">
-    <h2 class="text-center text-warning fw-bold mb-5">Projects</h2>
-    <div class="row justify-content-center g-4">
-      <!-- Project 1: Smart Parking System -->
-      <div class="col-md-5">
-        <div class="p-4 rounded-4 shadow"
-             style="height: 350px; background: transparent; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 8px 20px rgba(255,255,255,0.1); text-align: center;">
-          <h5 class="card-title" style="font-size: 1.5rem; color: #28a745;">Smart Parking System</h5>
-          <p class="card-text" style="font-size: 1rem; color: #fff;">
-            Me and my team are planning to create a Java-based smart parking system that helps users find available parking spots in real-time. The application features a user-friendly GUI and efficient algorithms to optimize parking space usage.
-          </p>
-          <p style="font-size: 1rem; color: #fff;"><strong>Use Languages & Frameworks:</strong> Java, JavaScript, CSS, Terminal (Eclipse IDE), HTML</p>
+  <!-- Contact Section -->
+  <section id="contact" class="resume-section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="resume-card contact-card">
+            <i class="fab fa-facebook fa-2x mb-2" style="color:#3b5998;"></i>
+            <p><strong>Facebook</strong></p>
+            <small>Dan Aeron Belda</small>
+          </div>
         </div>
-      </div>
-
-      <!-- Project 2: Medical Center Patient and Staff Management System -->
-      <div class="col-md-5">
-        <div class="p-4 rounded-4 shadow"
-             style="height: 350px; background: transparent; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 8px 20px rgba(255,255,255,0.1); text-align: center;">
-          <h5 class="card-title" style="font-size: 1.5rem; color: #28a745;">Medical Center Patient and Staff Management System</h5>
-          <p class="card-text" style="font-size: 1rem; color: #fff;">
-            Our team developed a comprehensive management system for a medical center using Java. The system includes modules for patient registration, appointment scheduling, staff management, and medical records, all accessible through an intuitive GUI.
-          </p>
-          <p style="font-size: 1rem; color: #fff;"><strong>Use Languages & Frameworks:</strong> Java, JavaScript, CSS, Terminal (Eclipse IDE), HTML, MySQL</p>
+        <div class="col-md-6 col-lg-4">
+          <div class="resume-card contact-card">
+            <i class="fab fa-instagram fa-2x mb-2" style="color:#C13584;"></i>
+            <p><strong>Instagram</strong></p>
+            <small>__beldan__</small>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="bg-image" 
-         style="padding: 70px 0; 
-                background-image: url('https://img.pikbest.com/wp/202344/light-gray-background-design-abstract-grey-color-dark-black-and-with-old-wall-texture-of-cement-illuminated-by-white-gradient_9898524.jpg!w700wp'); 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat; 
-                position: relative;">
-  <!-- Overlay for readability -->
-  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); z-index:1;"></div>
-
-  <div class="container" style="position: relative; z-index:2;">
-    <h2 class="text-center fw-bold mb-4 text-warning">Contact Me</h2>
-    <div class="row g-4 justify-content-center">
-      <!-- Facebook -->
-      <div class="col-md-6 col-lg-4">
-        <div class="p-4 text-center rounded-4 shadow hover-card"
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <i class="fab fa-facebook fa-2x mb-2" style="color:#3b5998;"></i>
-          <p class="mb-0 text-white"><strong>Facebook</strong></p>
-          <small class="text-white">Dan Aeron Belda</small>
+        <div class="col-md-6 col-lg-4">
+          <div class="resume-card contact-card">
+            <i class="fas fa-envelope fa-2x mb-2" style="color:#f39c12;"></i>
+            <p><strong>Email</strong></p>
+            <small>danaeron15@gmail.com</small>
+          </div>
         </div>
-      </div>
-      <!-- Instagram -->
-      <div class="col-md-6 col-lg-4">
-        <div class="p-4 text-center rounded-4 shadow hover-card"
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <i class="fab fa-instagram fa-2x mb-2" style="color:#C13584;"></i>
-          <p class="mb-0 text-white"><strong>Instagram</strong></p>
-          <small class="text-white">__beldan__</small>
+        <div class="col-md-6 col-lg-4">
+          <div class="resume-card contact-card">
+            <i class="fas fa-phone fa-2x mb-2" style="color:#27ae60;"></i>
+            <p><strong>Phone</strong></p>
+            <small>09452738391</small>
+          </div>
         </div>
-      </div>
-      <!-- Email -->
-      <div class="col-md-6 col-lg-4">
-        <div class="p-4 text-center rounded-4 shadow hover-card"
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <i class="fas fa-envelope fa-2x mb-2" style="color:#f39c12;"></i>
-          <p class="mb-0 text-white"><strong>Email</strong></p>
-          <small class="text-white">danaeron15@gmail.com</small>
-        </div>
-      </div>
-      <!-- Phone -->
-      <div class="col-md-6 col-lg-4">
-        <div class="p-4 text-center rounded-4 shadow hover-card"
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <i class="fas fa-phone fa-2x mb-2" style="color:#27ae60;"></i>
-          <p class="mb-0 text-white"><strong>Phone</strong></p>
-          <small class="text-white">09452738391</small>
-        </div>
-      </div>
-      <!-- GitHub -->
-      <div class="col-12">
-        <div class="p-4 text-center rounded-4 shadow hover-card"
-             style="background: transparent; border: 2px solid rgba(255,255,255,0.6); box-shadow: 0 8px 20px rgba(255,255,255,0.1);">
-          <i class="fab fa-github fa-2x mb-2" style="color:#fffdfd;"></i>
-          <p class="mb-0 text-white"><strong>GitHub</strong></p>
-          <small class="text-white">github.com/DanBelda</small>
+        <div class="col-12">
+          <div class="resume-card contact-card github-card">
+            <i class="fab fa-github fa-2x mb-2" style="color:#111827;"></i>
+            <p><strong>GitHub</strong></p>
+            <small>github.com/DanBelda</small>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-
-
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -398,3 +310,48 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
