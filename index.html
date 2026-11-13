@@ -3,31 +3,334 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f7fb">
-  <meta name="description" content="Portfolio of Dan Aeron P. Belda, an Information Technology student majoring in Networking.">
-  <title>Dan Aeron P. Belda — IT Student &amp; Aspiring Web Developer</title>
+  <meta name="theme-color" content="#101a31">
+  <meta name="description" content="Dan Aeron P. Belda is a fourth-year BSIT Networking student and aspiring web developer in San Pablo, Laguna.">
+  <title>Dan Aeron P. Belda | Web Development &amp; Networking Portfolio</title>
   <style>
-    :root{color-scheme:light;--bg:#f6f7fb;--surface:#fff;--soft:#eef1f8;--ink:#17223b;--muted:#59677f;--line:#dce2ed;--accent:#485ce0;--mint:#72dfc4;--navy:#121b31;--shadow:0 16px 42px rgba(20,33,63,.08);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:6rem}body{margin:0;background:var(--bg);color:var(--ink);font-size:1rem;line-height:1.7}a{color:var(--accent);text-underline-offset:.2em}a:hover{color:#3448c5}button,a{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid #e6a833;outline-offset:4px;border-radius:4px}.container{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}
-    .site-header{position:sticky;z-index:10;top:0;color:#f5f7ff;background:rgba(18,27,49,.97);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(14px)}.nav-wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{color:#fff;font-weight:800;text-decoration:none}.brand-mark{display:inline-grid;width:2rem;height:2rem;place-items:center;margin-right:.5rem;color:var(--navy);background:var(--mint);border-radius:.6rem}.nav-links{display:flex;gap:.3rem;margin:0;padding:0;list-style:none}.nav-links a{display:block;padding:.55rem .7rem;color:#dce4f4;border-radius:.6rem;text-decoration:none;font-size:.88rem}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.12)}
-    .hero{display:grid;min-height:620px;align-items:center;padding:5rem 0;color:#fff;background:radial-gradient(circle at 85% 20%,rgba(72,92,224,.35),transparent 35%),linear-gradient(130deg,#121b31,#293d6a)}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:4rem}.eyebrow,.kicker{color:#73ddc1;font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.hero h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:1.05;letter-spacing:-.06em}.hero-intro{max-width:600px;color:#cbd5e7;font-size:1.15rem}.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}.button{display:inline-block;padding:.75rem 1.15rem;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:.7rem;text-decoration:none;font-weight:700}.button.secondary{background:transparent;border-color:#fff}.portrait{width:min(100%,340px);aspect-ratio:4/5;object-fit:cover;padding:.6rem;border:1px solid #ffffff66;border-radius:1.5rem;box-shadow:0 20px 60px #0005}
-    .section{padding:5rem 0;border-bottom:1px solid var(--line);scroll-margin-top:6rem}.section.alt{background:var(--soft)}.section-heading{max-width:700px;margin-bottom:2rem}.section-heading h2{margin:.25rem 0 .6rem;font-size:clamp(2rem,4vw,2.8rem);line-height:1.15}.section-heading>p:last-child{color:var(--muted)}.panel,.card{padding:1.5rem;background:var(--surface);border:1px solid var(--line);border-radius:1rem;box-shadow:var(--shadow)}.muted{color:var(--muted)}.info-grid,.skill-grid,.cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.25rem}.info-item{padding:.8rem;background:var(--bg);border:1px solid var(--line);border-radius:.7rem}.info-item strong{display:block;color:var(--muted);font-size:.75rem}.skill-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.tag-list{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}.tag-list li{padding:.25rem .55rem;background:var(--bg);border:1px solid var(--line);border-radius:99px;color:var(--muted);font-size:.85rem}.experience-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:1rem}.card h3{margin:.2rem 0 .5rem}.cert-grid{margin:0}.project-list{display:grid;gap:1rem}.project-card{display:grid;grid-template-columns:.7fr 1.3fr;overflow:hidden;padding:0}.project-visual{display:grid;min-height:180px;place-items:center;background:radial-gradient(circle,#dce5ff,var(--soft));font-size:2rem;font-weight:800;color:var(--accent)}.project-content{padding:1.5rem}.project-content h3{line-height:1.3}.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}.email-card{color:#fff;background:linear-gradient(135deg,#172340,#293d6a)}.email-card a{color:#fff;font-size:clamp(1.2rem,3vw,1.8rem);font-weight:800;overflow-wrap:anywhere}.contact-links{display:grid;gap:.7rem}.contact-link{display:flex;align-items:center;gap:.8rem;padding:1rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:.8rem;text-decoration:none;font-weight:650;overflow-wrap:anywhere}.contact-link:hover{border-color:var(--accent)}.contact-icon{width:2rem;color:var(--accent);text-align:center}.contact-link .meta{display:block;color:var(--muted);font-size:.85rem;font-weight:400;overflow-wrap:anywhere}footer{padding:1.5rem 0;background:var(--surface);color:var(--muted);text-align:center}
-    @media(max-width:850px){.skill-grid{grid-template-columns:repeat(2,1fr)}.hero-grid{gap:2rem}}@media(max-width:650px){.nav-wrap{align-items:flex-start;flex-direction:column;padding:1rem 0}.nav-links{flex-wrap:wrap}.hero{min-height:auto;padding:4rem 0}.hero-grid,.experience-layout,.contact-grid,.project-card{grid-template-columns:1fr}.hero-copy{text-align:center}.portrait{grid-row:1;width:min(70%,280px);justify-self:center}.actions{justify-content:center}.project-visual{min-height:140px}.section{padding:3.5rem 0}}@media(max-width:430px){.container{width:calc(100% - 2rem)}.skill-grid,.info-grid,.cert-grid{grid-template-columns:1fr}.nav-links a{padding:.35rem;font-size:.82rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --surface: #fff;
+      --surface-alt: #eaf0f7;
+      --ink: #17243b;
+      --muted: #526178;
+      --line: #dce4ef;
+      --navy: #101a31;
+      --navy-soft: #1c2b49;
+      --accent: #4960df;
+      --accent-hover: #3549bd;
+      --mint: #72dfc4;
+      --focus: #e4a528;
+      --shadow: 0 16px 42px rgba(20, 33, 63, .09);
+      --header-height: 74px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 1rem); }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-size: 1rem; line-height: 1.7; }
+    body[data-theme="dark"] {
+      color-scheme: dark; --bg: #0e1422; --surface: #171f31; --surface-alt: #202a3e;
+      --ink: #eef2fc; --muted: #b6c1d5; --line: #303c52; --navy: #0b1120;
+      --navy-soft: #17243d; --accent: #b2bcff; --accent-hover: #d0d5ff;
+      --mint: #72dfc4; --shadow: 0 16px 42px rgba(0, 0, 0, .25);
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        color-scheme: dark; --bg: #0e1422; --surface: #171f31; --surface-alt: #202a3e;
+        --ink: #eef2fc; --muted: #b6c1d5; --line: #303c52; --navy: #0b1120;
+        --navy-soft: #17243d; --accent: #b2bcff; --accent-hover: #d0d5ff;
+        --mint: #72dfc4; --shadow: 0 16px 42px rgba(0, 0, 0, .25);
+      }
+    }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    a:hover { color: var(--accent-hover); }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 4px; }
+    .skip-link { position: fixed; z-index: 30; top: .5rem; left: .5rem; padding: .65rem 1rem; transform: translateY(-160%); color: #fff; background: var(--navy); border-radius: .5rem; }
+    .skip-link:focus { transform: translateY(0); }
+    .container { width: min(1120px, calc(100% - 2.5rem)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; min-height: var(--header-height); color: #f6f8ff; background: rgba(16, 26, 49, .96); border-bottom: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(14px); }
+    .nav-wrap { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; }
+    .brand { display: inline-flex; align-items: center; gap: .65rem; color: #fff; font-weight: 780; letter-spacing: -.03em; text-decoration: none; white-space: nowrap; }
+    .brand-mark { display: grid; width: 2rem; height: 2rem; place-items: center; color: var(--navy); background: var(--mint); border-radius: .6rem; font-size: .9rem; font-weight: 900; }
+    .nav-panel, .nav-links, .nav-actions { display: flex; align-items: center; }
+    .nav-panel { gap: .45rem; }
+    .nav-links { gap: .15rem; margin: 0; padding: 0; list-style: none; }
+    .nav-links a { display: block; padding: .55rem .65rem; color: #dce4f4; border-radius: .55rem; text-decoration: none; font-size: .86rem; font-weight: 620; transition: background .2s ease, color .2s ease; }
+    .nav-links a:hover, .nav-links a[aria-current="location"] { color: #fff; background: rgba(255,255,255,.13); }
+    .nav-actions { gap: .5rem; }
+    .icon-button, .menu-button { display: inline-grid; width: 2.65rem; height: 2.65rem; place-items: center; color: #f6f8ff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: .7rem; cursor: pointer; font: inherit; }
+    .icon-button:hover, .menu-button:hover { background: rgba(255,255,255,.16); }
+    .menu-button { display: none; font-size: 1.2rem; }
+    main { overflow: clip; }
+    .hero { position: relative; isolation: isolate; display: grid; min-height: min(700px, calc(100svh - var(--header-height))); align-items: center; overflow: hidden; padding: clamp(4rem, 8vw, 7rem) 0; color: #fff; background: radial-gradient(ellipse at 82% 28%, rgba(73,96,223,.36), transparent 36%), radial-gradient(ellipse at 8% 100%, rgba(114,223,196,.13), transparent 42%), linear-gradient(130deg, #101a31, #1d2d4d 62%, #26395e); }
+    .hero::before { position: absolute; z-index: -1; inset: 0; content: ""; opacity: .16; background-image: linear-gradient(rgba(185,204,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(185,204,255,.18) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(90deg, transparent, #000 78%); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr); align-items: center; gap: clamp(2.5rem, 7vw, 6rem); }
+    .eyebrow, .section-kicker { margin: 0 0 .6rem; font-size: .76rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .65rem; color: #a9f0df; }
+    .eyebrow::before { width: 1.5rem; height: 2px; content: ""; background: var(--mint); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 760px; margin-bottom: 1rem; font-size: clamp(2.7rem, 7vw, 5.4rem); line-height: 1.03; letter-spacing: -.065em; }
+    .hero-intro { max-width: 610px; margin-bottom: 1.8rem; color: #d1d9e8; font-size: clamp(1.05rem, 2vw, 1.23rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+    .button { display: inline-flex; min-height: 2.9rem; align-items: center; justify-content: center; gap: .5rem; padding: .7rem 1.1rem; color: #fff; background: var(--accent); border: 1px solid var(--accent); border-radius: .72rem; text-decoration: none; font-weight: 720; transition: transform .18s ease, background .18s ease; }
+    .button:hover { color: #fff; background: #5b6fe8; transform: translateY(-2px); }
+    .button.secondary { background: transparent; border-color: rgba(255,255,255,.48); }
+    .button.secondary:hover { background: rgba(255,255,255,.1); }
+    .portrait-wrap { position: relative; width: min(100%, 340px); justify-self: center; padding: .65rem; border: 1px solid rgba(255,255,255,.32); border-radius: 1.5rem; background: rgba(255,255,255,.07); box-shadow: 0 24px 70px rgba(0,0,0,.26); transform: rotate(1.5deg); }
+    .portrait-wrap::after { position: absolute; z-index: -1; right: -1rem; bottom: -1rem; width: 70%; height: 70%; content: ""; border: 2px solid var(--mint); border-radius: 1.5rem; opacity: .72; }
+    .portrait-wrap img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 1rem; }
+    .hero-note { display: flex; align-items: center; gap: .55rem; margin: 1.2rem 0 0; color: #cbd5e7; font-size: .88rem; }
+    .status-dot { width: .55rem; height: .55rem; flex: 0 0 auto; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(114,223,196,.14); }
+    .section { padding: clamp(4rem, 8vw, 6.2rem) 0; border-bottom: 1px solid var(--line); scroll-margin-top: calc(var(--header-height) + 1rem); }
+    .section.alt { background: var(--surface-alt); }
+    .section-heading { max-width: 720px; margin-bottom: 2rem; }
+    .section-kicker { color: var(--accent); }
+    h2 { margin-bottom: .65rem; font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.14; letter-spacing: -.045em; }
+    .section-heading > p:last-child { margin-bottom: 0; color: var(--muted); }
+    .panel, .skill-card, .project-card, .cert-card, .experience-card, .contact-card { background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
+    .panel { padding: clamp(1.35rem, 4vw, 2.2rem); }
+    .about-copy { max-width: 850px; margin-bottom: 1.35rem; color: var(--muted); font-size: 1.08rem; }
+    .info-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin: 1.5rem 0 0; }
+    .info-chip { min-height: 4rem; display: flex; align-items: center; gap: .65rem; padding: .8rem; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: .75rem; font-size: .9rem; }
+    .info-chip strong { display: block; color: var(--muted); font-size: .72rem; }
+    .info-symbol { color: var(--accent); font-weight: 850; }
+    .section-intro { color: var(--muted); }
+    .skill-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+    .skill-card { padding: 1.25rem; }
+    .skill-card h3 { margin-bottom: .85rem; font-size: 1.03rem; letter-spacing: -.02em; }
+    .skill-card h3 span { margin-right: .4rem; color: var(--accent); }
+    .tag-list { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+    .tag-list li { padding: .28rem .58rem; color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; font-size: .81rem; }
+    .experience-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1.2rem; }
+    .experience-card { padding: 1.45rem; }
+    .experience-card h3 { margin-bottom: .4rem; font-size: 1.22rem; }
+    .meta { margin-bottom: .65rem; color: var(--muted); font-size: .9rem; }
+    .experience-card ul { margin: .9rem 0 0; padding-left: 1.2rem; color: var(--muted); }
+    .cert-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .cert-card { min-height: 155px; padding: 1.15rem; }
+    .cert-mark { display: inline-grid; min-width: 3.3rem; min-height: 2.4rem; place-items: center; margin-bottom: .75rem; padding: .25rem .55rem; color: #17243b; background: #eef1f8; border: 2px solid #293953; border-radius: .55rem; font-size: .75rem; font-weight: 900; line-height: 1.05; text-align: center; }
+    .cert-mark.redhat { color: #fff; background: #c60000; border-color: #c60000; }
+    .cert-card h3 { margin: 0 0 .35rem; font-size: 1rem; line-height: 1.35; }
+    .cert-card p { margin: 0; color: var(--muted); font-size: .86rem; }
+    .project-list { display: grid; gap: 1rem; }
+    .project-card { display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.3fr); overflow: hidden; }
+    .project-visual { position: relative; display: grid; min-height: 235px; place-items: center; overflow: hidden; padding: 1.2rem; color: var(--accent); background: radial-gradient(circle at 70% 25%, rgba(114,223,196,.3), transparent 35%), linear-gradient(140deg, var(--surface-alt), var(--bg)); border-right: 1px solid var(--line); }
+    .project-visual::before, .project-visual::after { position: absolute; width: 150px; height: 150px; content: ""; border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent); border-radius: 50%; }
+    .project-visual::after { width: 100px; height: 100px; }
+    .project-visual .node { position: relative; z-index: 1; display: grid; width: 3.8rem; height: 3.8rem; place-items: center; color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 1.1rem; box-shadow: var(--shadow); font-size: 1.2rem; font-weight: 850; }
+    .project-visual .visual-caption { position: absolute; right: .8rem; bottom: .45rem; left: .8rem; z-index: 1; color: var(--muted); font-size: .7rem; text-align: center; }
+    .project-content { padding: clamp(1.2rem, 3vw, 1.8rem); }
+    .project-role { margin: 0 0 .25rem; color: var(--accent); font-size: .85rem; font-weight: 750; }
+    .project-content h3 { margin: .25rem 0 .55rem; font-size: clamp(1.18rem, 2vw, 1.5rem); line-height: 1.25; letter-spacing: -.035em; }
+    .project-content > p:not(.project-role):not(.meta) { margin: .75rem 0; color: var(--muted); }
+    .project-details { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem 1rem; margin: .9rem 0 0; padding-top: .85rem; border-top: 1px solid var(--line); }
+    .project-details div { min-width: 0; }
+    .project-details dt { color: var(--muted); font-size: .7rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+    .project-details dd { margin: .12rem 0 0; overflow-wrap: anywhere; font-size: .84rem; }
+    .placeholder { color: var(--muted); font-style: italic; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(250px, .85fr); gap: 1rem; }
+    .contact-card { padding: clamp(1.25rem, 3vw, 2rem); }
+    .email-card { color: #fff; background: linear-gradient(135deg, #172340, #293d6a); border-color: transparent; }
+    .email-card .section-kicker { color: var(--mint); }
+    .email-card h3 { margin-bottom: .45rem; font-size: 1.15rem; }
+    .email-address { display: inline-block; margin-bottom: 1rem; color: #fff; font-size: clamp(1.25rem, 3vw, 1.8rem); font-weight: 780; letter-spacing: -.035em; overflow-wrap: anywhere; }
+    .email-card .button { color: #16213c; background: var(--mint); border-color: var(--mint); }
+    .email-card .button:hover { background: #a0f1de; }
+    .copy-status { min-height: 1.5em; margin: .55rem 0 0; color: #d9ffef; font-size: .82rem; }
+    .contact-links { display: grid; gap: .7rem; align-content: center; }
+    .contact-link { display: flex; align-items: center; gap: .75rem; padding: .9rem 1rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: .8rem; text-decoration: none; font-weight: 650; transition: border-color .2s ease, transform .2s ease; }
+    .contact-link:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .contact-icon { width: 2rem; flex: 0 0 auto; color: var(--accent); text-align: center; font-weight: 800; }
+    .contact-link small { display: block; color: var(--muted); font-size: .78rem; font-weight: 400; overflow-wrap: anywhere; }
+    footer { padding: 1.5rem 0; color: var(--muted); background: var(--surface); text-align: center; font-size: .86rem; }
+    footer p { margin: 0; }
+    @media (max-width: 950px) { .nav-links a { padding-inline: .45rem; font-size: .79rem; } .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 700px) {
+      :root { --header-height: 66px; }
+      .container { width: min(100% - 2rem, 580px); }
+      .nav-wrap { position: relative; }
+      .menu-button { display: inline-grid; }
+      .nav-panel { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none; align-items: stretch; padding: .8rem 1rem 1rem; background: #101a31; border-top: 1px solid rgba(255,255,255,.12); box-shadow: 0 16px 24px rgba(0,0,0,.2); }
+      .nav-panel[data-open="true"] { display: flex; flex-direction: column; }
+      .nav-links { display: grid; gap: .15rem; }
+      .nav-links a { padding: .68rem .75rem; font-size: .95rem; }
+      .nav-actions { justify-content: flex-end; padding-top: .5rem; }
+      .hero { min-height: auto; padding: 4rem 0 3.75rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-copy { text-align: center; }
+      .hero-copy .eyebrow, .hero-actions { justify-content: center; }
+      .hero-intro { margin-inline: auto; }
+      .portrait-wrap { width: min(72%, 275px); grid-row: 1; }
+      .experience-layout, .cert-grid, .contact-grid { grid-template-columns: 1fr; }
+      .project-card { grid-template-columns: 1fr; }
+      .project-visual { min-height: 165px; border-right: 0; border-bottom: 1px solid var(--line); }
+    }
+    @media (max-width: 430px) { .brand { font-size: .92rem; } .info-grid, .skill-grid, .project-details { grid-template-columns: 1fr; } .hero-actions .button { flex: 1 1 100%; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } .portrait-wrap, .contact-link:hover, .button:hover { transform: none; } }
   </style>
 </head>
 <body>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">DB</span>Dan Belda</a><nav aria-label="Main navigation"><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></nav></div></header>
-  <main>
-    <section class="hero" id="top"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow">Information Technology Student · Networking</p><h1>Hello, I’m<br>Dan Aeron P. Belda.</h1><p class="hero-intro">Aspiring web developer and BSIT Networking student building experience across software, mobile apps, and machine-learning projects.</p><div class="actions"><a class="button" href="#projects">View projects ↘</a><a class="button secondary" href="#contact">Contact me →</a></div></div><img class="portrait" src="danpic.jpg" alt="Portrait of Dan Aeron P. Belda" width="340" height="425"></div></section>
-    <section class="section" id="about"><div class="container"><div class="section-heading"><p class="kicker">A little about me</p><h2>About</h2><p>My studies, interests, and the work I’m learning to do.</p></div><div class="panel"><p class="muted">Information Technology student majoring in Networking at Batangas State University, with hands-on experience in computer software and hardware development, mobile app development, and networking.</p><div class="info-grid"><div class="info-item"><strong>Age</strong>21</div><div class="info-item"><strong>Location</strong>San Pablo, Laguna</div><div class="info-item"><strong>Year level</strong>4th Year</div><div class="info-item"><strong>Course</strong>BSIT major in Networking</div></div></div></div></section>
-    <section class="section alt" id="skills"><div class="container"><div class="section-heading"><p class="kicker">What I work with</p><h2>Skills</h2><p>A quick scan of the tools and technologies I’ve studied and used.</p></div><div class="skill-grid"><article class="card"><h3>Programming</h3><ul class="tag-list"><li>C++</li><li>Java</li><li>PHP</li><li>HTML / CSS</li><li>JavaScript</li></ul></article><article class="card"><h3>Tools &amp; workflow</h3><ul class="tag-list"><li>GitHub</li><li>VS Code</li><li>Bootstrap</li><li>Canva</li><li>Eclipse</li><li>Google Workspace</li><li>Slack</li><li>Discord</li></ul></article><article class="card"><h3>App development</h3><ul class="tag-list"><li>Flutter</li><li>Dart</li></ul></article><article class="card"><h3>Machine learning</h3><ul class="tag-list"><li>YOLO V26</li><li>Roboflow</li><li>Google Colab</li></ul></article></div></div></section>
-    <section class="section" id="experience"><div class="container"><div class="section-heading"><p class="kicker">Learning through doing</p><h2>Experience &amp; certifications</h2><p>Freelance work and the credentials listed in my current portfolio.</p></div><div class="experience-layout"><article class="card"><p class="kicker">Work experience</p><h3>Freelance</h3><p class="muted">October 2026 – Present</p><ul class="muted"><li>Developing and delivering small-scale app and software solutions based on client needs.</li><li>Working on modern technologies and project-based learning to improve technical skills and problem-solving abilities.</li></ul></article><div><p class="kicker">Certifications</p><div class="cert-grid"><article class="card"><h3>AWS Academy Cloud Foundations</h3><p class="muted">Trained · 2026<br>Amazon Web Services</p></article><article class="card"><h3>OpenShift Development I</h3><p class="muted">Introduction to Containers with Podman<br>Red Hat Academy · Course attendance · 2026</p></article></div></div></div></div></section>
-    <section class="section alt" id="projects"><div class="container"><div class="section-heading"><p class="kicker">Selected work</p><h2>Projects</h2><p>Selected projects.</p></div><div class="project-list"><article class="card project-card"><div class="project-visual" role="img" aria-label="Machine-learning project placeholder">ML</div><div class="project-content"><p class="kicker">Front-end Developer · Capstone Project</p><h3>Corn Leaf Disease Detection System through Machine-Learning YOLOV26 Algorithm Approach</h3><p class="muted">June 2026 – Present</p></div></article><article class="card project-card"><div class="project-visual" role="img" aria-label="Smart parking project placeholder">P</div><div class="project-content"><p class="kicker">Front-end Developer · SIA Project</p><h3>Smart Parking System</h3><p class="muted">December 2025</p></div></article></div></div></section>
-    <section class="section" id="contact"><div class="container"><div class="section-heading"><p class="kicker">Let’s connect</p><h2>Contact</h2><p>Email is the best way to reach me. You can also call or find me on social platforms.</p></div><div class="contact-grid"><div class="card email-card"><p class="kicker">Email</p><h3>Start a conversation</h3><a href="mailto:danaeron15@gmail.com">danaeron15@gmail.com</a><p><button class="button" id="copy-email" type="button">Copy email</button></p><p id="copy-status" aria-live="polite"></p></div><div class="contact-links" aria-label="Other contact methods"><a class="contact-link" href="tel:09943663346"><span class="contact-icon" aria-hidden="true">☎</span><span>Call <span dir="ltr">09943663346</span></span></a><a class="contact-link" href="https://www.facebook.com/dan.aeron.belda.2024/" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">f</span><span>Facebook · Dan Aeron Belda<span class="meta">Open Facebook profile ↗</span></span></a><a class="contact-link" href="https://www.instagram.com/__beldan__/" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">◎</span><span>Instagram · __beldan__<span class="meta">Open Instagram profile ↗</span></span></a><a class="contact-link" href="https://www.linkedin.com/in/dan-aeron-belda-14b81044a/" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">in</span><span>LinkedIn · Dan Aeron Belda<span class="meta">Open LinkedIn profile ↗</span></span></a></div></div></div></section>
-  </main><footer><div class="container"><p>© <span id="year"></span> Dan Aeron P. Belda · Student portfolio</p></div></footer>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Dan Aeron P. Belda, home"><span class="brand-mark" aria-hidden="true">DB</span>Dan Belda</a>
+      <button class="menu-button" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-panel"><span aria-hidden="true">☰</span></button>
+      <div class="nav-panel" id="nav-panel" data-open="false">
+        <nav aria-label="Main navigation"><ul class="nav-links">
+          <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li>
+        </ul></nav>
+        <div class="nav-actions"><button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle color theme"><span aria-hidden="true">◐</span></button></div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">BSIT Networking Student · Aspiring Web Developer</p>
+          <h1 id="hero-title">Dan Aeron<br>P. Belda</h1>
+          <p class="hero-intro">I’m a fourth-year Information Technology student majoring in Networking at Batangas State University, building experience in web development, mobile apps, and machine-learning projects.</p>
+          <div class="hero-actions"><a class="button" href="#projects">View projects <span aria-hidden="true">↘</span></a><a class="button secondary" href="#contact">Contact me <span aria-hidden="true">→</span></a></div>
+          <p class="hero-note"><span class="status-dot" aria-hidden="true"></span>Based in San Pablo, Laguna</p>
+        </div>
+        <div class="portrait-wrap"><img src="danpic.jpg" alt="Portrait of Dan Aeron P. Belda" width="340" height="425"></div>
+      </div>
+    </section>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading"><p class="section-kicker">A little about me</p><h2 id="about-title">About</h2><p>My studies, interests, and the work I’m learning to do.</p></div>
+        <div class="panel"><p class="about-copy">I’m an Information Technology student majoring in Networking at Batangas State University. My experience so far includes computer software and hardware development, mobile app development, and networking. I’m continuing to build my skills through freelance work and academic projects.</p>
+          <div class="info-grid" aria-label="Personal and education details">
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">01</span><span><strong>Age</strong>21</span></div>
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">⌖</span><span><strong>Location</strong>San Pablo, Laguna</span></div>
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">04</span><span><strong>Year level</strong>4th Year</span></div>
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">⌘</span><span><strong>Course</strong>BSIT major in Networking</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading"><p class="section-kicker">What I work with</p><h2 id="skills-title">Skills</h2><p>A quick scan of the tools and technologies I’ve studied and used.</p></div>
+        <div class="skill-grid">
+          <article class="skill-card"><h3><span aria-hidden="true">&lt;/&gt;</span> Programming</h3><ul class="tag-list"><li>C++</li><li>Java</li><li>PHP</li><li>HTML / CSS</li><li>JavaScript</li></ul></article>
+          <article class="skill-card"><h3><span aria-hidden="true">⌘</span> Tools &amp; workflow</h3><ul class="tag-list"><li>GitHub</li><li>VS Code</li><li>Bootstrap</li><li>Canva</li><li>Eclipse</li><li>Google Workspace</li><li>Slack</li><li>Discord</li></ul></article>
+          <article class="skill-card"><h3><span aria-hidden="true">▣</span> App development</h3><ul class="tag-list"><li>Flutter</li><li>Dart</li></ul></article>
+          <article class="skill-card"><h3><span aria-hidden="true">✳</span> Machine learning</h3><ul class="tag-list"><li>YOLO V26</li><li>Roboflow</li><li>Google Colab</li></ul></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading"><p class="section-kicker">Learning through doing</p><h2 id="experience-title">Experience &amp; certifications</h2><p>Freelance work and the credentials listed in my portfolio.</p></div>
+        <div class="experience-layout">
+          <article class="experience-card"><p class="section-kicker">Work experience</p><h3>Freelance</h3><p class="meta"><time datetime="2026-10">October 2026</time> – Present</p><ul><li>Developing and delivering small-scale app and software solutions based on client needs.</li><li>Working with modern technologies and project-based learning to improve technical skills and problem-solving abilities.</li></ul></article>
+          <div><p class="section-kicker">Certifications</p><div class="cert-grid">
+            <article class="cert-card"><span class="cert-mark" aria-hidden="true">aws<br>ACADEMY</span><h3>AWS Academy Cloud Foundations</h3><p>Trained · 2026<br>Amazon Web Services</p></article>
+            <article class="cert-card"><span class="cert-mark redhat" aria-hidden="true">Red<br>Hat</span><h3>OpenShift Development I</h3><p>Introduction to Containers with Podman<br>Red Hat Academy · Course attendance · 2026</p></article>
+          </div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading"><p class="section-kicker">Selected work</p><h2 id="projects-title">Projects</h2><p>Academic projects where I’ve contributed as a front-end developer. Add screenshots and public project links when available.</p></div>
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-visual" role="img" aria-label="Decorative network-node illustration representing the corn leaf disease detection project"><span class="node" aria-hidden="true">ML</span><span class="visual-caption">Project image placeholder</span></div>
+            <div class="project-content"><p class="project-role">Front-end Developer · Capstone Project</p><h3>Corn Leaf Disease Detection System through Machine-Learning YOLOV26 Algorithm Approach</h3><p class="meta"><time datetime="2026-06">June 2026</time> – Present</p><p>Developing the front-end for a capstone system focused on corn leaf disease detection using a machine-learning YOLOV26 algorithm approach.</p><dl class="project-details"><div><dt>Technologies</dt><dd class="placeholder">[Add the technologies you used]</dd></div><div><dt>GitHub / demo</dt><dd class="placeholder">[Add a project link]</dd></div></dl></div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual" role="img" aria-label="Decorative network-node illustration representing the smart parking project"><span class="node" aria-hidden="true">P</span><span class="visual-caption">Project image placeholder</span></div>
+            <div class="project-content"><p class="project-role">Front-end Developer · SIA Project</p><h3>Smart Parking System</h3><p class="meta"><time datetime="2025-12">December 2025</time></p><p>Contributed front-end development to an academic Smart Parking System project.</p><dl class="project-details"><div><dt>Technologies</dt><dd class="placeholder">[Add the technologies you used]</dd></div><div><dt>GitHub / demo</dt><dd class="placeholder">[Add a project link]</dd></div></dl></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading"><p class="section-kicker">Let’s connect</p><h2 id="contact-title">Contact</h2><p>Email is the best way to reach me. You can also call or find me on social platforms.</p></div>
+        <div class="contact-grid">
+          <div class="contact-card email-card"><p class="section-kicker">Email</p><h3>Start a conversation</h3><a class="email-address" href="mailto:danaeron15@gmail.com">danaeron15@gmail.com</a><div><button class="button" id="copy-email" type="button">Copy email</button></div><p class="copy-status" id="copy-status" aria-live="polite"></p></div>
+          <div class="contact-links" aria-label="Other contact methods">
+            <a class="contact-link" href="tel:09943663346"><span class="contact-icon" aria-hidden="true">☎</span><span>Call <bdi dir="ltr">09943663346</bdi><small>Tap to call</small></span></a>
+            <a class="contact-link" href="https://www.facebook.com/dan.aeron.belda.2024/" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">f</span><span>Facebook · Dan Aeron Belda<small>Open Facebook profile ↗</small></span></a>
+            <a class="contact-link" href="https://www.instagram.com/__beldan__/" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">◎</span><span>Instagram · __beldan__<small>Open Instagram profile ↗</small></span></a>
+            <a class="contact-link" href="https://www.linkedin.com/in/dan-aeron-belda-14b81044a/" target="_blank" rel="noopener noreferrer"><span class="contact-icon" aria-hidden="true">in</span><span>LinkedIn · Dan Aeron Belda<small>Open LinkedIn profile ↗</small></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><p>© <span id="year">2026</span> Dan Aeron P. Belda · Student portfolio</p></div></footer>
   <script>
-    document.getElementById('year').textContent=String(new Date().getFullYear());
-    document.getElementById('copy-email').addEventListener('click',async()=>{const email='danaeron15@gmail.com';const status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(email);status.textContent='Email copied to clipboard.'}catch{status.textContent='Copy unavailable here. Select the email address above to copy it.'}});
+    (() => {
+      const body = document.body;
+      const themeButton = document.getElementById('theme-toggle');
+      const themeMeta = document.querySelector('meta[name="theme-color"]');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+      let savedTheme = null;
+      try { savedTheme = localStorage.getItem('portfolio-theme'); } catch { /* Storage may be unavailable. */ }
+      if (savedTheme === 'light' || savedTheme === 'dark') body.dataset.theme = savedTheme;
+      const isDark = () => body.dataset.theme ? body.dataset.theme === 'dark' : systemDark.matches;
+      const updateTheme = () => {
+        const dark = isDark();
+        themeButton.setAttribute('aria-pressed', String(dark));
+        themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        themeMeta.setAttribute('content', dark ? '#0e1422' : '#f5f7fb');
+      };
+      updateTheme();
+      themeButton.addEventListener('click', () => {
+        body.dataset.theme = isDark() ? 'light' : 'dark';
+        try { localStorage.setItem('portfolio-theme', body.dataset.theme); } catch { /* Theme still works for this visit. */ }
+        updateTheme();
+      });
+      systemDark.addEventListener?.('change', () => { if (!body.dataset.theme) updateTheme(); });
+
+      const menuButton = document.getElementById('menu-toggle');
+      const navPanel = document.getElementById('nav-panel');
+      const closeMenu = () => {
+        navPanel.dataset.open = 'false';
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+      };
+      menuButton.addEventListener('click', () => {
+        const open = navPanel.dataset.open !== 'true';
+        navPanel.dataset.open = String(open);
+        menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      });
+      navPanel.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+
+      const navLinks = [...document.querySelectorAll('.nav-links a')];
+      const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${entry.target.id}`) link.setAttribute('aria-current', 'location');
+              else link.removeAttribute('aria-current');
+            });
+          });
+        }, { rootMargin: '-28% 0px -62% 0px' });
+        sections.forEach(section => observer.observe(section));
+      }
+
+      document.getElementById('year').textContent = String(new Date().getFullYear());
+      document.getElementById('copy-email').addEventListener('click', async () => {
+        const email = document.querySelector('.email-address').textContent.trim();
+        const status = document.getElementById('copy-status');
+        try {
+          await navigator.clipboard.writeText(email);
+          status.textContent = 'Email copied to clipboard.';
+        } catch {
+          status.textContent = 'Copy unavailable here. Select the email address above to copy it.';
+        }
+      });
+    })();
   </script>
 </body>
 </html>
