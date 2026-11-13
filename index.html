@@ -7,76 +7,558 @@
   <meta name="description" content="Dan Aeron P. Belda is a fourth-year BSIT Networking student and aspiring web developer in San Pablo, Laguna.">
   <title>Dan Aeron P. Belda | Web Development &amp; Networking Portfolio</title>
   <style>
-    :root{color-scheme:light;--bg:#f5f7fb;--surface:#fff;--surface-alt:#eaf0f7;--ink:#17243b;--muted:#526178;--line:#dce4ef;--navy:#101a31;--accent:#4960df;--accent-hover:#3549bd;--mint:#72dfc4;--focus:#e4a528;--shadow:0 16px 42px rgba(20,33,63,.09);--header-height:74px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    body[data-theme=dark]{color-scheme:dark;--bg:#0e1422;--surface:#171f31;--surface-alt:#202a3e;--ink:#eef2fc;--muted:#b6c1d5;--line:#303c52;--navy:#0b1120;--accent:#b2bcff;--accent-hover:#d0d5ff;--mint:#72dfc4;--shadow:0 16px 42px rgba(0,0,0,.25)}
-    @media(prefers-color-scheme:dark){body:not([data-theme=light]){color-scheme:dark;--bg:#0e1422;--surface:#171f31;--surface-alt:#202a3e;--ink:#eef2fc;--muted:#b6c1d5;--line:#303c52;--navy:#0b1120;--accent:#b2bcff;--accent-hover:#d0d5ff;--mint:#72dfc4;--shadow:0 16px 42px rgba(0,0,0,.25)}}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 1rem)}body{margin:0;background:var(--bg);color:var(--ink);font-size:1rem;line-height:1.7}a{color:var(--accent);text-underline-offset:.2em}a:hover{color:var(--accent-hover)}button,a{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:4px}img{display:block;max-width:100%}.container{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}
-    .skip-link{position:fixed;z-index:30;top:.5rem;left:.5rem;padding:.65rem 1rem;transform:translateY(-160%);color:#fff;background:var(--navy);border-radius:.5rem;text-decoration:none}.skip-link:focus{transform:translateY(0)}
-    .site-header{position:sticky;z-index:20;top:0;min-height:var(--header-height);color:#f6f8ff;background:rgba(16,26,49,.96);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}.nav-wrap{min-height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:1.25rem}.brand{display:inline-flex;align-items:center;gap:.65rem;color:#fff;font-weight:780;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}.brand-mark{display:grid;width:2rem;height:2rem;place-items:center;color:var(--navy);background:var(--mint);border-radius:.6rem;font-size:.9rem;font-weight:900}.nav-panel,.nav-links,.nav-actions{display:flex;align-items:center}.nav-panel{gap:.45rem}.nav-links{gap:.15rem;margin:0;padding:0;list-style:none}.nav-links a{display:block;padding:.55rem .65rem;color:#dce4f4;border-radius:.55rem;text-decoration:none;font-size:.86rem;font-weight:620}.nav-links a:hover,.nav-links a[aria-current=location]{color:#fff;background:rgba(255,255,255,.13)}.nav-actions{gap:.5rem}.icon-button,.menu-button{display:inline-grid;width:2.65rem;height:2.65rem;place-items:center;color:#f6f8ff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:.8rem;cursor:pointer;font:inherit}.menu-button{display:none;font-size:1.2rem}main{overflow:clip}
-    .hero{position:relative;isolation:isolate;display:grid;min-height:min(700px,calc(100svh - var(--header-height)));align-items:center;overflow:hidden;padding:clamp(4rem,8vw,7rem) 0;color:#fff;background:var(--navy)}.hero:before{position:absolute;z-index:-1;inset:0;content:"";opacity:.16;background-image:linear-gradient(rgba(185,204,255,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(185,204,255,.18) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,transparent,#000 65%)}.hero:after{position:absolute;z-index:-1;inset:0;content:"";background:radial-gradient(circle at 80% 20%,rgba(73,96,223,.34),transparent 34%),linear-gradient(130deg,#101a31,#20304f 58%,#2a3d62)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);align-items:center;gap:clamp(2.5rem,7vw,6rem)}.eyebrow,.section-kicker{margin:0 0 .6rem;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow{display:inline-flex;align-items:center;gap:.65rem;color:#a9f0df}.eyebrow:before{width:1.5rem;height:2px;content:"";background:var(--mint)}h1,h2,h3,p{margin-top:0}h1{max-width:760px;margin-bottom:1rem;font-size:clamp(2.7rem,7vw,5.4rem);line-height:1.03;letter-spacing:-.065em}.hero-intro{max-width:610px;margin-bottom:1.8rem;color:#d1d9e8;font-size:clamp(1.05rem,2vw,1.23rem)}.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem}.button{display:inline-flex;min-height:2.9rem;align-items:center;justify-content:center;gap:.5rem;padding:.7rem 1.1rem;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:.8rem;text-decoration:none;font-weight:700;cursor:pointer}.button:hover{color:#fff;background:#5b6fe8;transform:translateY(-2px)}.button.secondary{background:transparent;border-color:rgba(255,255,255,.48)}.button.secondary:hover{background:rgba(255,255,255,.1)}.button.tertiary{color:var(--ink);background:var(--surface);border-color:var(--line)}.portrait-wrap{position:relative;width:min(100%,340px);justify-self:center;padding:.65rem;border:1px solid rgba(255,255,255,.32);border-radius:1.5rem;background:rgba(255,255,255,.08);box-shadow:0 26px 70px rgba(0,0,0,.2)}.portrait-wrap:after{position:absolute;z-index:-1;right:-1rem;bottom:-1rem;width:70%;height:70%;content:"";border:2px solid var(--mint);border-radius:1.5rem;opacity:.72}.portrait-wrap img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:1rem}.hero-note{display:flex;align-items:center;gap:.55rem;margin:1.2rem 0 0;color:#cbd5e7;font-size:.88rem}.status-dot{width:.55rem;height:.55rem;flex:0 0 auto;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(114,223,196,.14)}
-    .section{padding:clamp(4rem,8vw,6.2rem) 0;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--header-height) + 1rem)}.section.alt{background:var(--surface-alt)}.section-heading{max-width:720px;margin-bottom:2rem}.section-kicker{color:var(--accent)}h2{margin-bottom:.65rem;font-size:clamp(1.9rem,4vw,2.75rem);line-height:1.14;letter-spacing:-.045em}.section-heading>p:last-child{margin-bottom:0;color:var(--muted)}.panel,.skill-card,.project-card,.contact-card,.experience-card,.cert-card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;box-shadow:var(--shadow)}.panel{padding:clamp(1.35rem,4vw,2.2rem)}.about-copy{max-width:850px;margin-bottom:1.35rem;color:var(--muted);font-size:1.08rem}.info-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin:1.5rem 0 0}.info-chip{min-height:4rem;display:flex;align-items:center;gap:.65rem;padding:.8rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.75rem;font-size:.9rem}.info-chip strong{display:block;color:var(--muted);font-size:.72rem}.info-symbol{color:var(--accent);font-weight:850}.skill-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.skill-card{padding:1.25rem}.skill-card h3{margin-bottom:.8rem;font-size:1.05rem}.skill-card h3 span{margin-right:.45rem;color:var(--accent)}.tag-list{display:flex;flex-wrap:wrap;gap:.45rem;margin:0;padding:0;list-style:none}.tag-list li{padding:.3rem .6rem;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:999px;font-size:.82rem}
-    .experience-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}.experience-card{padding:1.5rem}.experience-card h3{margin-bottom:.5rem;font-size:1.25rem}.meta{color:var(--muted);font-size:.9rem}.experience-card ul{margin:1rem 0 0;padding-left:1.2rem;color:var(--muted)}.tabs-shell{margin-top:.25rem;border:1px solid var(--line);border-radius:1rem;background:var(--surface);box-shadow:var(--shadow);overflow:hidden}.tablist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.25rem;padding:.4rem;background:var(--bg);border-bottom:1px solid var(--line)}.tab-button{border:1px solid transparent;border-radius:.8rem;padding:.8rem 1rem;background:transparent;color:var(--muted);font:inherit;font-weight:750;cursor:pointer}.tab-button[aria-selected=true]{background:var(--surface);border-color:var(--line);color:var(--ink)}.tab-panel[hidden]{display:none}.tab-panel{padding:clamp(1.1rem,2vw,1.6rem)}
-    .cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.cert-card{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(160px,.7fr);align-items:center;gap:1rem;padding:1rem;background:linear-gradient(145deg,var(--surface),var(--bg))}.cert-content{display:flex;flex-direction:column;gap:.75rem;min-width:0}.cert-badge{display:inline-flex;align-self:flex-start;padding:.28rem .6rem;background:rgba(73,96,223,.1);color:var(--accent);border:1px solid rgba(73,96,223,.18);border-radius:999px;font-size:.73rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.cert-card h3{margin:0;font-size:1.05rem;line-height:1.4}.cert-meta{display:grid;gap:.5rem;margin:0;color:var(--muted);font-size:.9rem}.cert-meta div{display:flex;flex-direction:column;gap:.12rem}.cert-meta dt{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.cert-meta dd{margin:0;color:var(--ink);overflow-wrap:anywhere}.cert-description{margin:0;color:var(--muted);font-size:.92rem;line-height:1.6}.cert-actions{display:flex;flex-wrap:wrap;gap:.6rem}.cert-media{display:grid;place-items:center;width:100%;min-height:180px;overflow:hidden;border:1px solid var(--line);background:var(--bg);border-radius:.9rem}.cert-media img{width:100%;height:100%;max-height:220px;object-fit:cover}.cert-media.is-hidden{display:none}
-    .project-list{display:grid;gap:1rem}.project-card{display:grid;grid-template-columns:minmax(200px,.7fr) minmax(0,1.3fr);overflow:hidden}.project-card.featured{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}.project-visual{position:relative;display:grid;min-height:220px;place-items:center;overflow:hidden;padding:1.25rem;color:var(--muted);background:radial-gradient(circle at 75% 25%,rgba(73,96,223,.13),transparent 36%),linear-gradient(135deg,#edf3ff,#f4f7fb)}.project-visual:before,.project-visual:after{position:absolute;content:"";border:1px solid rgba(73,96,223,.15);border-radius:50%}.project-visual:before{width:175px;height:175px}.project-visual:after{width:120px;height:120px}.visual-label{position:relative;z-index:1;display:grid;width:4rem;height:4rem;place-items:center;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:1rem;font-weight:800}.project-content{padding:clamp(1.2rem,3vw,1.8rem)}.project-content h3{margin:.25rem 0 .5rem;font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.25}.project-role{margin:0 0 .25rem;color:var(--accent);font-weight:750;font-size:.86rem}.project-content>p:not(.project-role):not(.meta){margin:.8rem 0;color:var(--muted)}.project-slots{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1rem;margin:1rem 0 0;padding-top:.9rem;border-top:1px solid var(--line)}.project-slots div{min-width:0}.project-slots dt{color:var(--muted);font-size:.72rem;font-weight:750;text-transform:uppercase}.project-slots dd{margin:.12rem 0 0;overflow-wrap:anywhere;font-size:.85rem}
-    .contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:1rem}.contact-card{padding:clamp(1.25rem,3vw,2rem)}.contact-card.email-card{color:#fff;background:linear-gradient(135deg,#172340,#293d6a);border-color:transparent}.email-card .section-kicker{color:var(--mint)}.email-card h3{margin-bottom:.35rem;font-size:1.1rem}.email-link{display:inline-block;margin-bottom:1.1rem;color:#fff;font-size:clamp(1.25rem,3.2vw,1.8rem);font-weight:780;letter-spacing:-.035em;overflow-wrap:anywhere;text-decoration:none}.email-card .button{color:#16213c;background:var(--mint);border-color:var(--mint)}.copy-status{min-height:1.5em;margin:.65rem 0 0;color:#d4ffef;font-size:.83rem}.contact-links{display:grid;gap:.75rem;align-content:center}.contact-link{display:flex;align-items:center;gap:.8rem;padding:.95rem 1rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:.8rem;text-decoration:none}.contact-link:hover{border-color:var(--accent)}.contact-icon{width:2rem;color:var(--accent);text-align:center}
-    .lightbox{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:rgba(12,18,30,.72);backdrop-filter:blur(6px)}.lightbox[hidden]{display:none}.lightbox-panel{width:min(92vw,900px);max-height:90vh;background:var(--surface);border-radius:1rem;border:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}.lightbox-header{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:1rem 1rem 0}.lightbox-title{margin:0;font-size:1.05rem}.lightbox-close{display:grid;place-items:center;width:2.25rem;height:2.25rem;border:1px solid var(--line);border-radius:.7rem;background:var(--surface);color:var(--ink);cursor:pointer;font-size:1.2rem}.lightbox-body{padding:1rem}.lightbox-body img{width:100%;max-height:76vh;object-fit:contain;background:var(--bg);border-radius:.8rem;border:1px solid var(--line)}footer{padding:1.6rem 0;color:var(--muted);background:var(--surface);text-align:center;font-size:.86rem}footer p{margin:0}
-    @media(max-width:900px){.nav-links a{padding-inline:.5rem;font-size:.8rem}.skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cert-grid{grid-template-columns:1fr}}
-    @media(max-width:700px){:root{--header-height:68px}.container{width:min(100% - 2rem,560px)}.nav-wrap{position:relative}.menu-button{display:inline-grid}.nav-panel{position:absolute;top:calc(100% + 1px);right:0;left:0;display:none;align-items:stretch;padding:.8rem 1rem 1rem;background:#121b31;border-top:1px solid rgba(255,255,255,.1)}.nav-panel[data-open=true]{display:flex;flex-direction:column}.nav-links{display:grid;gap:.2rem}.nav-links a{padding:.72rem .8rem;font-size:.95rem}.nav-actions{justify-content:flex-end;padding-top:.45rem}.hero{min-height:auto;padding:4.5rem 0 4rem}.hero-grid{grid-template-columns:1fr;gap:2.4rem}.hero-copy{text-align:center}.hero-copy .eyebrow,.hero-actions{justify-content:center}.hero-intro{margin-inline:auto}.portrait-wrap{width:min(72%,280px);grid-row:1}.cert-card{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.project-card{grid-template-columns:1fr}}
-    @media(max-width:430px){.brand{font-size:.9rem}.info-grid,.skill-grid,.project-slots{grid-template-columns:1fr}.hero-actions .button{flex:1 1 100%}.tablist{grid-template-columns:1fr}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+    :root{color-scheme:light;--bg:#f5f7fb;--surface:#fff;--surface-alt:#eaf0f7;--ink:#17243b;--muted:#526178;--line:#dce4ef;--navy:#101a31;--accent:#4960df;--accent-hover:#3549bd;--mint:#72dfc4;--focus:#e4a5c7;--shadow:0 16px 42px rgba(20,33,63,.09);--header-height:74px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body[data-theme=dark]{color-scheme:dark;--bg:#0e1422;--surface:#171f31;--surface-alt:#202a3e;--ink:#eef2fc;--muted:#b6c1d5;--line:#303c52;--navy:#0b1120;--accent:#b2bcff;--accent-hover:#d0d5ff;--mint:#72dfc4;--focus:#e4a5c7;--shadow:0 16px 42px rgba(0,0,0,.25)}
+    @media(prefers-color-scheme:dark){body:not([data-theme=light]){color-scheme:dark;--bg:#0e1422;--surface:#171f31;--surface-alt:#202a3e;--ink:#eef2fc;--muted:#b6c1d5;--line:#303c52;--navy:#0b1120;--accent:#b2bcff;--accent-hover:#d0d5ff;--mint:#72dfc4;--focus:#e4a5c7;--shadow:0 16px 42px rgba(0,0,0,.25)}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 1rem)}body{margin:0;background:var(--bg);color:var(--ink);font-size:1rem;line-height:1.7}a{color:var(--accent);text-underline-offset:.2em}a:hover{color:var(--accent-hover)}button,keygen,select,textarea{font:inherit}button,button:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:4px}img{max-width:100%;display:block}.skip-link{position:fixed;z-index:30;top:.5rem;left:.5rem;padding:.65rem 1rem;transform:translateY(-160%);color:#fff;background:var(--navy);border-radius:.5rem;text-decoration:none;transition:transform .2s ease}.skip-link:focus{transform:translateY(0)}.container{width:min(1120px,calc(100% - 2.5rem));margin-inline:auto}.site-header{position:sticky;z-index:20;top:0;min-height:var(--header-height);color:#f6f8ff;background:rgba(16,26,49,.96);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}.nav-wrap{min-height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:1.25rem}.brand{display:inline-flex;align-items:center;gap:.65rem;color:#fff;font-weight:780;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}.brand-mark{display:grid;width:2rem;height:2rem;place-items:center;color:var(--navy);background:var(--mint);border-radius:.6rem;font-size:.9rem;font-weight:900}.nav-panel,.nav-links,.nav-actions{display:flex;align-items:center}.nav-panel{gap:.45rem}.nav-links{gap:.15rem;margin:0;padding:0;list-style:none}.nav-links a{display:block;padding:.55rem .65rem;color:#dce4f4;border-radius:.55rem;text-decoration:none;font-size:.86rem;font-weight:620;transition:background .2s ease,color .2s ease}.nav-links a:hover,.nav-links a[aria-current="location"]{color:#fff;background:rgba(255,255,255,.13)}.nav-actions{gap:.5rem}.icon-button,.menu-button{display:inline-grid;width:2.65rem;height:2.65rem;place-items:center;color:#f6f8ff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:.8rem;cursor:pointer;font:inherit}.icon-button:hover,.menu-button:hover{background:rgba(255,255,255,.16)}.menu-button{display:none}.hero{position:relative;isolation:isolate;display:grid;min-height:min(700px,calc(100svh - var(--header-height)));align-items:center;overflow:hidden;padding:clamp(4rem,8vw,7rem) 0;color:#fff;background:var(--navy)}.hero::before{position:absolute;inset:0;content:"";opacity:.16;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,transparent,#000 65%)}.hero::after{position:absolute;inset:0;content:"";background:radial-gradient(circle at 75% 20%,rgba(73,96,223,.42),transparent 34%),radial-gradient(circle at 12% 100%,rgba(114,223,196,.18),transparent 42%),linear-gradient(120deg,#101a31 0%,#1d2d4d 55%,#2b4068 100%)}.hero > *{position:relative;z-index:1}.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);align-items:center;gap:clamp(2rem,4vw,4rem)}.eyebrow,.section-kicker{margin:0 0 .75rem;color:var(--mint);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow::before,.section-kicker::before{display:inline-block;width:1.5rem;height:2px;margin-right:.7rem;content:"";vertical-align:middle;background:var(--mint)}.hero h1{max-width:760px;margin:0 0 1rem;font-size:clamp(2.7rem,6vw,5rem);line-height:1.03;letter-spacing:-.065em}.hero-intro{max-width:61ch;margin:0 0 1.5rem;color:#dce4f4;font-size:clamp(1.05rem,2.3vw,1.24rem)}.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem}.button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:2.9rem;padding:.7rem 1.15rem;color:#fff;background:var(--accent);border:1px solid var(--accent);border-radius:.8rem;text-decoration:none;font-weight:700;transition:transform .2s ease,background .2s ease,border-color .2s ease}.button:hover{background:var(--accent-hover);border-color:var(--accent-hover);transform:translateY(-2px)}.button.secondary{background:transparent;border-color:rgba(255,255,255,.45)}.button.tertiary{color:var(--ink);background:var(--surface);border-color:var(--line)}.button.tertiary:hover{background:var(--surface-alt)}.hero-note{display:flex;align-items:center;gap:.55rem;margin:1.2rem 0 0;color:#d7e3f8;font-size:.88rem}.status-dot{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(114,223,196,.18)}.portrait-wrap{position:relative;justify-self:center;width:min(100%,340px);padding:.65rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:1.5rem;box-shadow:var(--shadow)}.portrait-wrap::after{position:absolute;right:-1rem;bottom:-1rem;z-index:-1;width:72%;height:72%;content:"";border:2px solid rgba(114,223,196,.8);border-radius:1.5rem;opacity:.8}.portrait-wrap img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:1.1rem}.section{padding:clamp(4rem,8vw,6.2rem) 0;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--header-height) + 1rem)}.section.alt{background:var(--surface-alt)}.section-heading{max-width:720px;margin:0 0 2rem}.section-heading h2{margin:0 0 .5rem;font-size:clamp(1.9rem,4vw,2.75rem);line-height:1.1;letter-spacing:-.055em}.section-heading p:last-child{margin:0;color:var(--muted)}.panel,.skill-card,.project-card,.contact-card,.experience-card,.cert-card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;box-shadow:var(--shadow)}.panel{padding:clamp(1.35rem,3vw,2.2rem)}.about-copy{max-width:850px;margin:0 auto}.about-copy p{margin:0 0 1.15rem;color:var(--muted);font-size:1.08rem}.info-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:1.5rem}.info-chip{display:flex;align-items:center;gap:.7rem;min-height:4rem;padding:.8rem .9rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.75rem;font-size:.95rem}.info-symbol{display:grid;width:1.8rem;height:1.8rem;place-items:center;color:var(--accent);background:rgba(73,96,223,.1);border-radius:.5rem;font-size:1rem;font-weight:800}.skill-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.skill-card{padding:1.25rem}.skill-card h3{margin:0 0 .8rem;font-size:1.05rem}.skill-card h3 span{color:var(--accent)}.tag-list{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}.tag-list li{padding:.32rem .7rem;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:999px;font-size:.82rem}.experience-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}.experience-card{padding:1.5rem}.experience-card h3{margin:0 0 .5rem;font-size:1.25rem}.meta{color:var(--muted);font-size:.92rem}.experience-card ul{margin:1rem 0 0;padding-left:1.2rem;color:var(--muted)}.experience-card li{padding-left:.25rem}.tabs-shell{margin-top:1.25rem}.tablist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.2rem;padding:.35rem;background:var(--bg);border:1px solid var(--line);border-radius:.9rem}.tab-button{padding:.8rem 1rem;color:var(--muted);background:transparent;border:1px solid transparent;border-radius:.7rem;cursor:pointer;font-weight:700}.tab-button[aria-selected="true"]{color:var(--ink);background:var(--surface);border-color:var(--line)}.tab-panel[hidden]{display:none}.tab-panel{padding-top:1.25rem}.cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.cert-card{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(160px,.7fr);align-items:center;gap:1rem;padding:1rem;background:linear-gradient(145deg,var(--surface),var(--bg));}.cert-content{display:flex;flex-direction:column;gap:.7rem}.cert-badge{display:inline-flex;align-self:flex-start;padding:.25rem .7rem;color:var(--accent);background:rgba(73,96,223,.08);border:1px solid rgba(73,96,223,.1);border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.cert-card h3{margin:0;font-size:1.05rem;line-height:1.45}.cert-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem .8rem;margin:0;color:var(--muted);font-size:.9rem}.cert-meta div{display:flex;flex-direction:column;gap:.12rem}.cert-meta dt{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.cert-meta dd{margin:0;color:var(--ink)}.cert-description{margin:0;color:var(--muted);font-size:.92rem;line-height:1.65}.cert-actions{display:flex;flex-wrap:wrap;gap:.6rem}.cert-media{display:grid;place-items:center;min-height:180px;border:1px solid var(--line);border-radius:.9rem;background:var(--bg);overflow:hidden}.cert-media img{width:100%;height:100%;object-fit:cover}.project-list{display:grid;gap:1rem}.project-card{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);overflow:hidden}.project-card.featured{border-color:color-mix(in srgb,var(--accent) 45%, var(--line));}.project-visual{position:relative;display:grid;min-height:220px;place-items:center;overflow:hidden;background:linear-gradient(135deg,var(--surface-alt),var(--bg));padding:1.25rem}.project-visual::before{position:absolute;inset:0;content:"";background:radial-gradient(circle at 75% 25%,rgba(73,96,223,.12),transparent 34%),linear-gradient(120deg,rgba(255,255,255,.06),transparent)}.project-visual img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:.9rem;border:1px solid rgba(255,255,255,.12);box-shadow:0 16px 34px rgba(16,26,49,.12)}.visual-label{position:relative;z-index:1;display:grid;width:4rem;height:4rem;place-items:center;color:var(--navy);background:var(--mint);border-radius:.9rem;font-size:1.25rem;font-weight:900}.project-content{padding:clamp(1.2rem,2.7vw,1.8rem)}.project-role{margin:0 0 .6rem;color:var(--accent);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.project-card h3{margin:0 0 .55rem;font-size:clamp(1.2rem,2vw,1.58rem);line-height:1.2}.meta-line{margin:0 0 .8rem;color:var(--muted);font-size:.88rem}.project-card p{margin:0;color:var(--muted);line-height:1.7}.project-slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem 1rem;margin-top:1rem}.project-slots div{display:flex;flex-direction:column;gap:.15rem;min-width:0}.project-slots dt{color:var(--muted);font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.project-slots dd{margin:0;color:var(--ink);font-weight:600;overflow-wrap:anywhere}.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:1rem}.contact-card{padding:clamp(1.25rem,3vw,2rem)}.contact-card.email-card{color:#fff;background:linear-gradient(135deg,#172340,#293d6a);border-color:transparent}.contact-card h3{margin:0 0 .7rem;font-size:clamp(1.2rem,2vw,1.65rem)}.email-link{display:inline-block;margin-top:1rem;color:#fff;font-size:clamp(1.2rem,2.5vw,1.7rem);font-weight:800;text-decoration:none;overflow-wrap:anywhere}.button.email-copy{margin-top:.8rem}.copy-status{min-height:1.5em;margin:.6rem 0 0;color:#d8eaff;font-size:.85rem}.contact-links{display:grid;gap:.75rem}.contact-link{display:flex;align-items:center;gap:.75rem;padding:.9rem 1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.8rem;text-decoration:none}.contact-link:hover{border-color:var(--accent)}.contact-icon{display:grid;width:2rem;height:2rem;place-items:center;color:var(--accent);background:rgba(73,96,223,.1);border-radius:.6rem;font-weight:900}.lightbox{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:rgba(12,18,30,.72);backdrop-filter:blur(6px)}.lightbox[hidden]{display:none}.lightbox-panel{width:min(92vw,900px);max-height:90vh;background:var(--surface);border:1px solid var(--line);border-radius:1rem;box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}.lightbox-header{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:1rem 1rem 0}.lightbox-title{margin:0;font-size:1.05rem}.lightbox-close{display:grid;place-items:center;width:2.25rem;height:2.25rem;border:1px solid var(--line);border-radius:.7rem;background:var(--surface);color:var(--ink);cursor:pointer;font-size:1.2rem}.lightbox-body{padding:1rem}.lightbox-body img{width:100%;max-height:76vh;object-fit:contain;background:var(--bg);border-radius:.8rem;border:1px solid var(--line)}footer{padding:1.6rem 0;color:var(--muted);background:var(--surface);text-align:center;font-size:.9rem}footer p{margin:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:900px){.nav-links a{padding-inline:.5rem;font-size:.8rem}.skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cert-grid,.project-card,.contact-grid{grid-template-columns:1fr}.project-card{grid-template-columns:minmax(0,1fr)}}@media(max-width:700px){:root{--header-height:68px}.container{width:min(100% - 2rem,560px)}.nav-wrap{position:relative}.menu-button{display:inline-grid}.nav-panel{position:absolute;top:calc(100% + .5rem);right:0;left:0;display:none;align-items:stretch;padding:.8rem 1rem;border:1px solid rgba(255,255,255,.12);background:#121b31;border-radius:1rem;box-shadow:0 20px 36px rgba(0,0,0,.2)}.nav-panel[data-open="true"]{display:flex}.nav-links{display:grid;gap:.2rem}.nav-actions{justify-content:flex-end;padding-top:.4rem}.hero-grid{grid-template-columns:1fr}.hero-actions{display:grid;grid-template-columns:1fr}.hero-note{text-align:center;justify-content:center}.skill-grid,.info-grid,.project-slots{grid-template-columns:1fr}.project-slots{gap:.7rem}.cert-card{grid-template-columns:1fr}.contact-card.email-card{padding:1.5rem 1.15rem}}@media(max-width:430px){.brand{font-size:.9rem}.hero h1{font-size:2.5rem}.cert-meta{grid-template-columns:1fr}.tablist{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="container nav-wrap">
-    <a class="brand" href="#top" aria-label="Dan Aeron P. Belda, home"><span class="brand-mark" aria-hidden="true">DB</span> Dan Belda</a>
-    <button class="menu-button" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-panel">☰</button>
-    <div class="nav-panel" id="nav-panel" data-open="false"><nav aria-label="Main navigation"><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></nav><div class="nav-actions"><button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle color theme"><span aria-hidden="true">◐</span></button></div></div>
-  </div></header>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Dan Aeron P. Belda, home"><span class="brand-mark" aria-hidden="true">DB</span> Dan Belda</a>
+      <button class="menu-button" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-panel">☰</button>
+      <div class="nav-panel" id="nav-panel" data-open="false">
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle color theme"><span aria-hidden="true">◐</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow">Information Technology Student · Networking</p><h1 id="hero-title">Hello, I’m<br>Dan Aeron P. Belda.</h1><p class="hero-intro">Aspiring web developer and BSIT Networking student building practical experience in software, mobile app, and machine-learning projects.</p><div class="hero-actions"><a class="button" href="#projects">View projects <span aria-hidden="true">↘</span></a><a class="button secondary" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div><p class="hero-note"><span class="status-dot" aria-hidden="true"></span>Open to freelance work, internships, and collaboration opportunities.</p></div><div class="portrait-wrap"><img src="danpic.jpg" alt="Portrait of Dan Aeron P. Belda" width="340" height="425"></div></div></section>
-    <section class="section" id="about" aria-labelledby="about-title"><div class="container"><div class="section-heading"><p class="section-kicker">A little about me</p><h2 id="about-title">About</h2><p>My studies, interests, and the work I’m learning to do.</p></div><div class="panel"><p class="about-copy">I am a fourth-year BSIT major in Networking student at Batangas State University with hands-on experience in computer software and hardware development, mobile app development, and project-based learning in web and networking.</p><p class="about-copy">My focus is on building a strong foundation in web development, app development, and networking while improving how I solve problems, collaborate, and communicate technology ideas in practical ways.</p><div class="info-grid" aria-label="Personal and education details"><div class="info-chip"><span class="info-symbol" aria-hidden="true">⌖</span><span><strong>Location</strong>San Pablo, Laguna</span></div><div class="info-chip"><span class="info-symbol" aria-hidden="true">04</span><span><strong>Year level</strong>4th Year</span></div><div class="info-chip"><span class="info-symbol" aria-hidden="true">⌘</span><span><strong>Course</strong>BSIT major in Networking</span></div><div class="info-chip"><span class="info-symbol" aria-hidden="true">★</span><span><strong>Focus</strong>Web &amp; app development</span></div></div></div></div></section>
-    <section class="section alt" id="skills" aria-labelledby="skills-title"><div class="container"><div class="section-heading"><p class="section-kicker">What I work with</p><h2 id="skills-title">Skills</h2><p>A quick scan of the tools and technologies I’ve studied and used.</p></div><div class="skill-grid"><article class="skill-card"><h3><span aria-hidden="true">&lt;/&gt;</span>Programming</h3><ul class="tag-list"><li>C++</li><li>Java</li><li>PHP</li><li>HTML / CSS</li><li>JavaScript</li></ul></article><article class="skill-card"><h3><span aria-hidden="true">⌘</span>Tools &amp; workflow</h3><ul class="tag-list"><li>GitHub</li><li>VS Code</li><li>Bootstrap</li><li>Canva</li><li>Eclipse</li></ul></article><article class="skill-card"><h3><span aria-hidden="true">▣</span>App development</h3><ul class="tag-list"><li>Flutter</li><li>Dart</li></ul></article><article class="skill-card"><h3><span aria-hidden="true">✳</span>Machine learning</h3><ul class="tag-list"><li>YOLO V26</li><li>Roboflow</li><li>Google Colab</li></ul></article></div></div></section>
-    <section class="section" id="experience" aria-labelledby="experience-title"><div class="container"><div class="section-heading"><p class="section-kicker">Learning through doing</p><h2 id="experience-title">Experience</h2><p>Freelance work and project-based learning.</p></div><div class="tabs-shell"><div class="tablist" role="tablist" aria-label="Portfolio tabs"><button class="tab-button" id="tab-experience" type="button" role="tab" aria-selected="true" aria-controls="panel-experience" tabindex="0">Experience</button><button class="tab-button" id="tab-certifications" type="button" role="tab" aria-selected="false" aria-controls="panel-certifications" tabindex="-1">Certifications</button></div><div class="tab-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience"><div class="experience-layout"><article class="experience-card"><p class="section-kicker">Work experience</p><h3>Freelance</h3><p class="meta"><time datetime="2026-10">October 2026</time> – Present</p><ul><li>Developing and delivering small-scale app and software solutions based on client needs.</li><li>Working on modern technologies and project-based learning to improve technical skills and problem-solving abilities.</li></ul></article></div></div>
-      <div class="tab-panel" id="panel-certifications" role="tabpanel" aria-labelledby="tab-certifications" hidden><div class="cert-grid">
-        <article class="cert-card"><div class="cert-content"><span class="cert-badge">Certificate of Participation</span><h3>Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies</h3><dl class="cert-meta"><div><dt>Issuer</dt><dd>Junior Philippine Computer Society (JPCS), Lipa Chapter, Batangas State University TheNEU - Lipa</dd></div><div><dt>Type</dt><dd>Certificate of Participation</dd></div><div><dt>Date</dt><dd>December 4, 2023</dd></div></dl><p class="cert-description">Participation in a technology-focused event on digital literacy, emerging concepts, and practical connections between digital tools and systems.</p><div class="cert-actions"><button class="button tertiary cert-lightbox-trigger" type="button" data-image="certificate-techsynergy.jpg" data-title="Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies">View certificate</button></div></div><div class="cert-media"><img src="certificate-techsynergy.jpg" alt="TechSynergy certificate for Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')"></div></article>
-        <article class="cert-card"><div class="cert-content"><span class="cert-badge">Training badge</span><h3>AWS Academy Cloud Foundations</h3><dl class="cert-meta"><div><dt>Issuer</dt><dd>Amazon Web Services</dd></div><div><dt>Type</dt><dd>Training badge</dd></div><div><dt>Status</dt><dd>Trained</dd></div><div><dt>Year</dt><dd>2026</dd></div></dl><p class="cert-description">Foundational cloud concepts and AWS Academy learning outcomes in a training environment.</p><div class="cert-actions"><button class="button tertiary cert-lightbox-trigger" type="button" data-image="aws-academy-cloud-foundations.png" data-title="AWS Academy Cloud Foundations">View certificate</button></div></div><div class="cert-media"><img src="aws-academy-cloud-foundations.png" alt="AWS Academy Cloud Foundations certificate" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')"></div></article>
-        <article class="cert-card"><div class="cert-content"><span class="cert-badge">Course attendance</span><h3>Red Hat OpenShift Development I: Introduction to Containers with Podman</h3><dl class="cert-meta"><div><dt>Issuer</dt><dd>Red Hat Academy</dd></div><div><dt>Type</dt><dd>Red Hat Academy course attendance</dd></div><div><dt>Year</dt><dd>2026</dd></div></dl><p class="cert-description">Course attendance focused on containers, Podman, and foundational OpenShift development workflows.</p><div class="cert-actions"><button class="button tertiary cert-lightbox-trigger" type="button" data-image="redhat-openshift-podman.png" data-title="Red Hat OpenShift Development I: Introduction to Containers with Podman">View certificate</button></div></div><div class="cert-media"><img src="redhat-openshift-podman.png" alt="Red Hat OpenShift Development I certificate" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')"></div></article>
-        <article class="cert-card"><div class="cert-content"><span class="cert-badge">Certificate of Participation</span><h3>Safeguarding Digital Freedom and Resilience Participation</h3><dl class="cert-meta"><div><dt>Issuer</dt><dd>Safeguarding Digital Freedom and Resilience</dd></div><div><dt>Type</dt><dd>Certificate of Participation</dd></div><div><dt>Details</dt><dd>Participation certificate</dd></div></dl><p class="cert-description">Participation in a digital resilience and online safety initiative focused on safeguarding digital freedom.</p><div class="cert-actions"><button class="button tertiary cert-lightbox-trigger" type="button" data-image="image_2026-11-13_215254351.png" data-title="Safeguarding Digital Freedom and Resilience Participation">View certificate</button></div></div><div class="cert-media"><img src="image_2026-11-13_215254351.png" alt="Safeguarding Digital Freedom and Resilience participation certificate" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')"></div></article>
-      </div></div></div></div></section>
-    <section class="section" id="projects" aria-labelledby="projects-title"><div class="container"><div class="section-heading"><p class="section-kicker">Selected work</p><h2 id="projects-title">Projects</h2><p>Selected projects from my academic and learning work.</p></div><div class="project-list"><article class="project-card featured"><div class="project-visual" role="img" aria-label="Placeholder illustration for the corn leaf disease detection capstone project"><span class="visual-label" aria-hidden="true">ML</span></div><div class="project-content"><p class="project-role">Front-end Developer · Capstone Project</p><h3>Corn Leaf Disease Detection System through Machine-Learning YOLOV26 Algorithm Approach</h3><p class="meta"><time datetime="2025-12">December 2025</time></p><p>Developed the front-end interface for a machine-learning-based crop monitoring system to support disease detection using image recognition.</p><dl class="project-slots"><div><dt>Role</dt><dd>Front-end Developer</dd></div><div><dt>Tools</dt><dd>HTML, CSS, JavaScript, YOLO V26, Roboflow</dd></div></dl></div></article><article class="project-card"><div class="project-visual" role="img" aria-label="Placeholder illustration for the smart parking system project"><span class="visual-label" aria-hidden="true">P</span></div><div class="project-content"><p class="project-role">Front-end Developer · SIA Project</p><h3>Smart Parking System</h3><p class="meta"><time datetime="2025-12">December 2025</time></p><p>Built the user interface for a smart parking system that organizes vehicle information and parking operations in a more user-friendly way.</p><dl class="project-slots"><div><dt>Role</dt><dd>Front-end Developer</dd></div><div><dt>Tools</dt><dd>HTML, CSS, JavaScript, Bootstrap</dd></div></dl></div></article></div></div></section>
-    <section class="section" id="contact" aria-labelledby="contact-title"><div class="container"><div class="section-heading"><p class="section-kicker">Let’s connect</p><h2 id="contact-title">Contact</h2><p>Email is the best way to reach me. You can also call or connect on social media.</p></div><div class="contact-grid"><div class="contact-card email-card"><p class="section-kicker">Email</p><h3>Start a conversation</h3><a class="email-link" href="mailto:danaeronbelda7@gmail.com">danaeronbelda7@gmail.com</a><div><button class="button" id="copy-email" type="button">Copy email</button><p class="copy-status" id="copy-status" aria-live="polite"></p></div></div><div class="contact-links" aria-label="Other contact methods"><a class="contact-link" href="tel:+639943663346"><span class="contact-icon" aria-hidden="true">☎</span><span>Call <span dir="ltr">09943663346</span></span></a><a class="contact-link" href="https://www.facebook.com/dan.aeron.belda.2024/" target="_blank" rel="noreferrer"><span class="contact-icon" aria-hidden="true">f</span><span>Facebook · Dan Aeron Belda</span></a><a class="contact-link" href="https://www.instagram.com/__beldan__/" target="_blank" rel="noreferrer"><span class="contact-icon" aria-hidden="true">◎</span><span>Instagram · __beldan__</span></a><a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span class="contact-icon" aria-hidden="true">in</span><span>LinkedIn · Dan Aeron Belda</span></a></div></div></div></section>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Information Technology Student · Networking</p>
+          <h1 id="hero-title">Hello, I’m<br>Dan Aeron P. Belda.</h1>
+          <p class="hero-intro">Aspiring web developer and BSIT Networking student building practical experience in software, mobile app, and machine-learning projects.</p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">View projects <span aria-hidden="true">↘</span></a>
+            <a class="button secondary" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-note"><span class="status-dot" aria-hidden="true"></span>Open to freelance work, internships, and collaboration opportunities.</p>
+        </div>
+
+        <div class="portrait-wrap">
+          <img src="danpic.jpg" alt="Portrait of Dan Aeron P. Belda" width="340" height="425" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">A little about me</p>
+          <h2 id="about-title">About</h2>
+          <p>My studies, interests, and the work I’m learning to do.</p>
+        </div>
+
+        <div class="panel about-copy">
+          <p>I am a fourth-year BSIT major in Networking student at Batangas State University with hands-on experience in computer software and hardware development, mobile app development, and project-based learning in web and networking.</p>
+          <p>My focus is on building a strong foundation in web development, app development, and networking while improving how I solve problems, collaborate, and communicate technology ideas in practical ways.</p>
+
+          <div class="info-grid" aria-label="Personal and education details">
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">⌂</span><span><strong>Location</strong><br>San Pablo, Laguna</span></div>
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">◌</span><span><strong>Year level</strong><br>4th Year</span></div>
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">▣</span><span><strong>Course</strong><br>BSIT major in Networking</span></div>
+            <div class="info-chip"><span class="info-symbol" aria-hidden="true">✦</span><span><strong>Focus</strong><br>Web &amp; app development</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">What I work with</p>
+          <h2 id="skills-title">Skills</h2>
+          <p>A quick scan of the tools and technologies I’ve studied and used.</p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3><span aria-hidden="true">⌁</span> Programming</h3>
+            <ul class="tag-list">
+              <li>C++</li>
+              <li>Java</li>
+              <li>PHP</li>
+              <li>HTML / CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3><span aria-hidden="true">◇</span> Tools &amp; workflow</h3>
+            <ul class="tag-list">
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Bootstrap</li>
+              <li>Canva</li>
+              <li>Ecclipse</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3><span aria-hidden="true">✧</span> App development</h3>
+            <ul class="tag-list">
+              <li>Flutter</li>
+              <li>Dart</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3><span aria-hidden="true">✽</span> Machine learning</h3>
+            <ul class="tag-list">
+              <li>YOLO V2</li>
+              <li>Roboflow</li>
+              <li>Google Colab</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Learning through doing</p>
+          <h2 id="experience-title">Experience</h2>
+          <p>Freelance work and project-based learning.</p>
+        </div>
+
+        <div class="tabs-shell">
+          <div class="tablist" role="tablist" aria-label="Portfolio tabs">
+            <button class="tab-button" id="tab-experience" type="button" role="tab" aria-selected="true" aria-controls="panel-experience" tabindex="0">Experience</button>
+            <button class="tab-button" id="tab-certifications" type="button" role="tab" aria-selected="false" aria-controls="panel-certifications" tabindex="-1">Certifications</button>
+          </div>
+
+          <div class="tab-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience">
+            <div class="experience-layout">
+              <article class="experience-card">
+                <p class="section-kicker">Work experience</p>
+                <h3>Freelance</h3>
+                <p class="meta"><time datetime="2026-10">October 2026</time> — Present</p>
+                <ul>
+                  <li>Developing and delivering small-scale app and software solutions based on client needs.</li>
+                  <li>Working on modern technologies and project-based learning to improve technical skills and problem-solving abilities.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="panel-certifications" role="tabpanel" aria-labelledby="tab-certifications" hidden>
+            <div class="cert-grid">
+              <article class="cert-card">
+                <div class="cert-content">
+                  <span class="cert-badge">Certificate of Participation</span>
+                  <h3>Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies</h3>
+                  <dl class="cert-meta">
+                    <div>
+                      <dt>Issuer</dt>
+                      <dd>Junior Philippine Computer Society (JPCS), Lipa Chapter, Batangas State University TheNEU - Lipa</dd>
+                    </div>
+                    <div>
+                      <dt>Type</dt>
+                      <dd>Certificate of Participation</dd>
+                    </div>
+                    <div>
+                      <dt>Date</dt>
+                      <dd>December 4, 2023</dd>
+                    </div>
+                  </dl>
+                  <p class="cert-description">Participation in a technology-focused event on digital literacy, emerging concepts, and practical connections between digital tools and systems.</p>
+                  <div class="cert-actions">
+                    <button class="button tertiary cert-lightbox-trigger" type="button" data-image="certificate-techsynergy.jpg" data-title="Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies">View certificate</button>
+                  </div>
+                </div>
+                <div class="cert-media">
+                  <img src="certificate-techsynergy.jpg" alt="TechSynergy certificate for Navigating the Digital Landscape 2023 - Connecting Concepts, Bridging Technologies" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')">
+                </div>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-content">
+                  <span class="cert-badge">Training badge</span>
+                  <h3>AWS Academy Cloud Foundations</h3>
+                  <dl class="cert-meta">
+                    <div>
+                      <dt>Issuer</dt>
+                      <dd>Amazon Web Services</dd>
+                    </div>
+                    <div>
+                      <dt>Type</dt>
+                      <dd>Training badge</dd>
+                    </div>
+                    <div>
+                      <dt>Status</dt>
+                      <dd>Trained</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>2026</dd>
+                    </div>
+                  </dl>
+                  <p class="cert-description">Foundational cloud concepts and AWS Academy learning outcomes in a training environment.</p>
+                  <div class="cert-actions">
+                    <button class="button tertiary cert-lightbox-trigger" type="button" data-image="aws-academy-cloud-foundations.png" data-title="AWS Academy Cloud Foundations">View certificate</button>
+                  </div>
+                </div>
+                <div class="cert-media">
+                  <img src="aws-academy-cloud-foundations.png" alt="AWS Academy Cloud Foundations certificate" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')">
+                </div>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-content">
+                  <span class="cert-badge">Course attendance</span>
+                  <h3>Red Hat OpenShift Development I: Introduction to Containers with Podman</h3>
+                  <dl class="cert-meta">
+                    <div>
+                      <dt>Issuer</dt>
+                      <dd>Red Hat Academy</dd>
+                    </div>
+                    <div>
+                      <dt>Type</dt>
+                      <dd>Red Hat Academy course attendance</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>2026</dd>
+                    </div>
+                  </dl>
+                  <p class="cert-description">Course attendance focused on containers, Podman, and foundational OpenShift development workflows.</p>
+                  <div class="cert-actions">
+                    <button class="button tertiary cert-lightbox-trigger" type="button" data-image="redhat-openshift-podman.png" data-title="Red Hat OpenShift Development I: Introduction to Containers with Podman">View certificate</button>
+                  </div>
+                </div>
+                <div class="cert-media">
+                  <img src="redhat-openshift-podman.png" alt="Red Hat OpenShift Development I certificate" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')">
+                </div>
+              </article>
+
+              <article class="cert-card">
+                <div class="cert-content">
+                  <span class="cert-badge">Certificate of Participation</span>
+                  <h3>Safeguarding Digital Freedom and Resilience Participation</h3>
+                  <dl class="cert-meta">
+                    <div>
+                      <dt>Issuer</dt>
+                      <dd>Safeguarding Digital Freedom and Resilience</dd>
+                    </div>
+                    <div>
+                      <dt>Type</dt>
+                      <dd>Certificate of Participation</dd>
+                    </div>
+                    <div>
+                      <dt>Details</dt>
+                      <dd>Participation certificate</dd>
+                    </div>
+                  </dl>
+                  <p class="cert-description">Participation in a digital resilience and online safety initiative focused on safeguarding digital freedom.</p>
+                  <div class="cert-actions">
+                    <button class="button tertiary cert-lightbox-trigger" type="button" data-image="image_2026-11-13_215254351.png" data-title="Safeguarding Digital Freedom and Resilience Participation">View certificate</button>
+                  </div>
+                </div>
+                <div class="cert-media">
+                  <img src="image_2026-11-13_215254351.png" alt="Safeguarding Digital Freedom and Resilience participation certificate" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')">
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Selected work</p>
+          <h2 id="projects-title">Projects</h2>
+          <p>Selected projects from my academic and learning work.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card featured">
+            <div class="project-visual" aria-label="Corn Leaf Disease Detection System project preview">
+              <img src="Screenshot 2026-11-13 222449.png" alt="Project preview for Corn Leaf Disease Detection System" width="640" height="420" loading="lazy">
+            </div>
+            <div class="project-content">
+              <p class="project-role">Front-end Developer · Capstone Project</p>
+              <h3>Corn Leaf Disease Detection System through Machine-Learning YOLOv2 Algorithm Approach</h3>
+              <p class="meta-line"><time datetime="2025-12">December 2025</time></p>
+              <p>Developed the front-end interface for a machine-learning-based crop monitoring system to support disease detection using image recognition.</p>
+              <dl class="project-slots">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Front-end Developer</dd>
+                </div>
+                <div>
+                  <dt>Tools</dt>
+                  <dd>HTML, CSS, JavaScript, YOLO V2, Roboflow</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual" aria-label="Smart Parking System project preview">
+              <img src="Parking System.jpg" alt="Smart Parking System project preview" width="640" height="420" loading="lazy">
+            </div>
+            <div class="project-content">
+              <p class="project-role">Front-end Developer · SIA Project</p>
+              <h3>Smart Parking System</h3>
+              <p class="meta-line"><time datetime="2025-12">December 2025</time></p>
+              <p>Built the user interface for a smart parking system that organizes vehicle information and parking operations in a more user-friendly way.</p>
+              <dl class="project-slots">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Front-end Developer</dd>
+                </div>
+                <div>
+                  <dt>Tools</dt>
+                  <dd>HTML, CSS, JavaScript, Bootstrap</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Let’s connect</p>
+          <h2 id="contact-title">Contact</h2>
+          <p>Email is the best way to reach me. You can also call or connect on social media.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card email-card">
+            <p class="section-kicker">Email</p>
+            <h3>Start a conversation</h3>
+            <a class="email-link" href="mailto:danaeronbelda7@gmail.com">danaeronbelda7@gmail.com</a>
+            <button class="button email-copy" id="copy-email" type="button">Copy email</button>
+            <p class="copy-status" id="copy-status" aria-live="polite"></p>
+          </div>
+
+          <div class="contact-card">
+            <p class="section-kicker">Other contacts</p>
+            <div class="contact-links" aria-label="Other contact methods">
+              <a class="contact-link" href="tel:+639943663346"><span class="contact-icon" aria-hidden="true">☎</span><span>Call <span dir="ltr">09943663346</span></span></a>
+              <a class="contact-link" href="https://www.facebook.com/dan.aeron.belda.2024/" target="_blank" rel="noreferrer"><span class="contact-icon" aria-hidden="true">f</span><span>Facebook · Dan Aeron Belda</span></a>
+              <a class="contact-link" href="https://www.instagram.com/__beldan__/" target="_blank" rel="noreferrer"><span class="contact-icon" aria-hidden="true">◎</span><span>Instagram · __beldan__</span></a>
+              <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span class="contact-icon" aria-hidden="true">in</span><span>LinkedIn · Dan Aeron Belda</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><div class="container"><p>© <span id="year">2026</span> Dan Aeron P. Belda · Student portfolio</p></div></footer>
-  <div class="lightbox" id="lightbox" hidden aria-hidden="true"><div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title"><div class="lightbox-header"><h3 class="lightbox-title" id="lightbox-title">Certificate</h3><button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close certificate view">×</button></div><div class="lightbox-body"><img id="lightbox-image" src="" alt="Expanded certificate preview"></div></div></div>
-  <!-- Future certificate card template:
-  <article class="cert-card"><div class="cert-content"><span class="cert-badge">Certificate type</span><h3>Certificate title</h3><dl class="cert-meta"><div><dt>Issuer</dt><dd>Issuer name</dd></div><div><dt>Type</dt><dd>Certificate type</dd></div><div><dt>Date</dt><dd>Date or year</dd></div></dl><p class="cert-description">One-line description.</p><div class="cert-actions"><button class="button tertiary cert-lightbox-trigger" type="button" data-image="image-file-name.ext" data-title="Certificate title">View certificate</button></div></div><div class="cert-media"><img src="image-file-name.ext" alt="Certificate description" width="240" height="160" loading="lazy" onerror="this.parentElement.classList.add('is-hidden')"></div></article>
-  -->
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year">2026</span> Dan Aeron P. Belda · Student portfolio</p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden aria-hidden="true">
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <div class="lightbox-header">
+        <h3 class="lightbox-title" id="lightbox-title">Certificate</h3>
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close certificate view">×</button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-image" src="" alt="Expanded certificate preview">
+      </div>
+    </div>
+  </div>
+
   <script>
-    (()=>{
-      const body=document.body,themeButton=document.getElementById('theme-toggle'),themeMeta=document.querySelector('meta[name="theme-color"]'),systemDark=window.matchMedia('(prefers-color-scheme: dark)');
-      try{const saved=localStorage.getItem('portfolio-theme');if(saved==='light'||saved==='dark')body.dataset.theme=saved}catch{}
-      const isDark=()=>body.dataset.theme?body.dataset.theme==='dark':systemDark.matches;
-      const updateTheme=()=>{const dark=isDark();themeButton.setAttribute('aria-pressed',String(dark));themeButton.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');themeMeta.content=dark?'#0e1422':'#101a31'};
-      updateTheme();themeButton.addEventListener('click',()=>{body.dataset.theme=isDark()?'light':'dark';try{localStorage.setItem('portfolio-theme',body.dataset.theme)}catch{}updateTheme()});systemDark.addEventListener?.('change',()=>{if(!body.dataset.theme)updateTheme()});
-      const menuButton=document.getElementById('menu-toggle'),navPanel=document.getElementById('nav-panel');
-      const closeMenu=()=>{navPanel.dataset.open='false';menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation menu')};
-      menuButton.addEventListener('click',()=>{const open=navPanel.dataset.open!=='true';navPanel.dataset.open=String(open);menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu')});navPanel.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
-      const navLinks=[...document.querySelectorAll('.nav-links a')],sections=navLinks.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
-      if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;navLinks.forEach(link=>{if(link.getAttribute('href')===`#${entry.target.id}`)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')})}),{rootMargin:'-28% 0px -62% 0px'});sections.forEach(section=>observer.observe(section))}
-      const tabButtons=[...document.querySelectorAll('.tab-button')],tabPanels=[...document.querySelectorAll('.tab-panel')];
-      function openTab(id,updateHash=true){const selected=document.getElementById(`tab-${id}`);if(!selected)return;tabButtons.forEach(button=>{const active=button===selected;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1});tabPanels.forEach(panel=>panel.hidden=panel.id!==`panel-${id}`);if(updateHash&&location.hash!==`#${id}`)history.replaceState(null,'',`#${id}`)}
-      tabButtons.forEach(button=>{button.addEventListener('click',()=>openTab(button.id.replace('tab-','')));button.addEventListener('keydown',event=>{const i=tabButtons.indexOf(button);let next=i;if(event.key==='ArrowRight'||event.key==='ArrowDown')next=(i+1)%tabButtons.length;else if(event.key==='ArrowLeft'||event.key==='ArrowUp')next=(i-1+tabButtons.length)%tabButtons.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabButtons.length-1;else return;event.preventDefault();tabButtons[next].focus();openTab(tabButtons[next].id.replace('tab-',''))})});
-      if(location.hash==='#experience'||location.hash==='#certifications')openTab(location.hash.slice(1),false);
-      window.addEventListener('hashchange',()=>{if(location.hash==='#experience'||location.hash==='#certifications')openTab(location.hash.slice(1),false)});
-      const lightbox=document.getElementById('lightbox'),lightboxImage=document.getElementById('lightbox-image'),lightboxTitle=document.getElementById('lightbox-title'),lightboxClose=document.getElementById('lightbox-close');let lastFocus=null;
-      const focusables=()=>[...lightbox.querySelectorAll('button,[href],[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled);
-      function closeLightbox(){lightbox.hidden=true;lightbox.setAttribute('aria-hidden','true');lastFocus?.focus()}
-      document.querySelectorAll('.cert-lightbox-trigger').forEach(button=>button.addEventListener('click',()=>{lastFocus=document.activeElement;lightboxImage.src=button.dataset.image;lightboxImage.alt=button.dataset.title;lightboxTitle.textContent=button.dataset.title;lightbox.hidden=false;lightbox.setAttribute('aria-hidden','false');lightboxClose.focus()}));
-      lightboxClose.addEventListener('click',closeLightbox);lightbox.addEventListener('click',event=>{if(event.target===lightbox)closeLightbox()});
-      document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(!lightbox.hidden)closeLightbox();closeMenu()}if(!lightbox.hidden&&event.key==='Tab'){const items=focusables(),first=items[0],last=items[items.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}}});
-      document.getElementById('year').textContent=String(new Date().getFullYear());
-      document.getElementById('copy-email').addEventListener('click',async()=>{const email='danaeronbelda7@gmail.com',status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(email);status.textContent='Email copied to clipboard.'}catch{status.textContent='Copy unavailable here. Select the email address above to copy it.'}});
+    (() => {
+      const body = document.body;
+      const themeButton = document.getElementById('theme-toggle');
+      const themeMeta = document.querySelector('meta[name="theme-color"]');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      try {
+        const saved = localStorage.getItem('portfolio-theme');
+        if (saved === 'light' || saved === 'dark') body.dataset.theme = saved;
+      } catch {}
+
+      const isDark = () => body.dataset.theme ? body.dataset.theme === 'dark' : systemDark.matches;
+
+      const updateTheme = () => {
+        const dark = isDark();
+        themeButton.setAttribute('aria-pressed', String(dark));
+        themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        if (themeMeta) themeMeta.content = dark ? '#0e1422' : '#101a31';
+      };
+
+      updateTheme();
+      themeButton.addEventListener('click', () => {
+        body.dataset.theme = isDark() ? 'light' : 'dark';
+        try { localStorage.setItem('portfolio-theme', body.dataset.theme); } catch {}
+        updateTheme();
+      });
+      systemDark.addEventListener?.('change', updateTheme);
+
+      const menuButton = document.getElementById('menu-toggle');
+      const navPanel = document.getElementById('nav-panel');
+      const closeMenu = () => {
+        navPanel.dataset.open = 'false';
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+      };
+
+      menuButton.addEventListener('click', () => {
+        const open = navPanel.dataset.open !== 'true';
+        navPanel.dataset.open = String(open);
+        menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      const navLinks = [...document.querySelectorAll('.nav-links a')];
+      const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(link => {
+              const active = link.getAttribute('href') === `#${entry.target.id}`;
+              link.setAttribute('aria-current', active ? 'location' : 'false');
+            });
+          });
+        }, { rootMargin: '-40% 0px -45% 0px' });
+        sections.forEach(section => observer.observe(section));
+      }
+
+      const tabButtons = [...document.querySelectorAll('.tab-button')];
+      const tabPanels = [...document.querySelectorAll('.tab-panel')];
+
+      function openTab(id, updateHash = true) {
+        const selected = document.getElementById(`tab-${id}`);
+        if (!selected) return;
+
+        tabButtons.forEach(button => {
+          const active = button === selected;
+          button.setAttribute('aria-selected', String(active));
+          button.tabIndex = active ? 0 : -1;
+        });
+
+        tabPanels.forEach(panel => {
+          const active = panel.id === `panel-${id}`;
+          panel.hidden = !active;
+        });
+
+        if (updateHash && id !== 'experience') history.replaceState(null, '', `#${id}`);
+      }
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => openTab(button.id.replace('tab-', '')));
+        button.addEventListener('keydown', event => {
+          const i = tabButtons.indexOf(button);
+          let next = i;
+          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (i + 1) % tabButtons.length;
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (i - 1 + tabButtons.length) % tabButtons.length;
+          if (event.key === 'Home') next = 0;
+          if (event.key === 'End') next = tabButtons.length - 1;
+          if (next !== i) {
+            event.preventDefault();
+            tabButtons[next].focus();
+            openTab(tabButtons[next].id.replace('tab-', ''));
+          }
+        });
+      });
+
+      if (location.hash === '#experience' || location.hash === '#certifications') {
+        openTab(location.hash.slice(1), false);
+      }
+      window.addEventListener('hashchange', () => {
+        if (location.hash === '#experience' || location.hash === '#certifications') {
+          openTab(location.hash.slice(1), false);
+        }
+      });
+
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      const lightboxTitle = document.getElementById('lightbox-title');
+      const lightboxClose = document.getElementById('lightbox-close');
+      let lastFocus = null;
+
+      const focusables = () => [...lightbox.querySelectorAll('button,[href],[tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled);
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+        lightbox.setAttribute('aria-hidden', 'true');
+        if (lastFocus) lastFocus.focus();
+      }
+
+      document.querySelectorAll('.cert-lightbox-trigger').forEach(button => {
+        button.addEventListener('click', () => {
+          lastFocus = document.activeElement;
+          lightboxImage.src = button.dataset.image;
+          lightboxImage.alt = button.dataset.title;
+          lightboxTitle.textContent = button.dataset.title;
+          lightbox.hidden = false;
+          lightbox.setAttribute('aria-hidden', 'false');
+          lightboxClose.focus();
+        });
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', event => {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          if (!lightbox.hidden) closeLightbox();
+          closeMenu();
+        }
+
+        if (!lightbox.hidden && event.key === 'Tab') {
+          const items = focusables();
+          const first = items[0];
+          const last = items[items.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      document.getElementById('year').textContent = String(new Date().getFullYear());
+      document.getElementById('copy-email').addEventListener('click', async () => {
+        const email = 'danaeronbelda7@gmail.com';
+        const status = document.getElementById('copy-status');
+        try {
+          await navigator.clipboard.writeText(email);
+          status.textContent = 'Email copied to clipboard.';
+        } catch {
+          status.textContent = 'Copy unavailable here. Select the email address above to copy it.';
+        }
+      });
     })();
   </script>
 </body>
