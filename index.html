@@ -364,7 +364,7 @@
       font-size: .82rem;
     }
 
-    .experience-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1.25rem; }
+    .experience-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
     .experience-card { padding: 1.5rem; }
     .experience-card h3 { margin-bottom: .5rem; font-size: 1.25rem; }
     .meta { color: var(--muted); font-size: .9rem; }
@@ -520,7 +520,7 @@
       .hero-copy .eyebrow, .hero-actions { justify-content: center; }
       .hero-intro { margin-inline: auto; }
       .portrait-wrap { width: min(72%, 280px); grid-row: 1; }
-      .experience-layout, .cert-grid, .contact-grid { grid-template-columns: 1fr; }
+      .cert-grid, .contact-grid { grid-template-columns: 1fr; }
       .project-card { grid-template-columns: 1fr; }
     }
 
@@ -550,6 +550,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -658,8 +659,8 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-kicker">Learning through doing</p>
-          <h2 id="experience-title">Experience &amp; certifications</h2>
-          <p>Freelance work and the credentials listed in my portfolio.</p>
+          <h2 id="experience-title">Experience</h2>
+          <p>Freelance work and project-based learning.</p>
         </div>
 
         <div class="experience-layout">
@@ -672,52 +673,61 @@
               <li>Working on modern technologies and project-based learning to improve technical skills and problem-solving abilities.</li>
             </ul>
           </article>
-
-          <div>
-            <p class="section-kicker">Certifications</p>
-            <div class="cert-grid">
-              <article class="cert-card">
-                <img class="cert-image" src="aws-academy-cloud-foundations.png" alt="AWS Academy Cloud Foundations certificate" loading="lazy">
-                <div class="cert-copy">
-                  <h3>AWS Academy Cloud Foundations</h3>
-                  <p>Trained · 2026</p>
-                  <p class="meta">Amazon Web Services</p>
-                </div>
-              </article>
-
-              <article class="cert-card">
-                <img class="cert-image" src="redhat-openshift-podman.png" alt="Red Hat OpenShift Development I certificate" loading="lazy">
-                <div class="cert-copy">
-                  <h3>OpenShift Development I</h3>
-                  <p>Introduction to Containers with Podman</p>
-                  <p class="meta">Red Hat Academy · Course attendance · 2026</p>
-                </div>
-              </article>
-
-              <article class="cert-card">
-                <img class="cert-image" src="certificate-techsynergy.jpg" alt="Techsynergy participation certificate" loading="lazy">
-                <div class="cert-copy">
-                  <h3>Techsynergy Participation</h3>
-                  <p>Participation certificate</p>
-                  <p class="meta">Techsynergy</p>
-                </div>
-              </article>
-
-              <article class="cert-card">
-                <img class="cert-image" src="Certificate of Participation Belda pdf.pdf" alt="Participation certificate" loading="lazy" onerror="this.style.display='none';">
-                <div class="cert-copy">
-                  <h3>Certificate of Participation</h3>
-                  <p><a href="Certificate%20of%20Participation%20Belda%20pdf.pdf" target="_blank" rel="noreferrer">Open PDF</a></p>
-                  <p class="meta">Participation</p>
-                </div>
-              </article>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="projects" aria-labelledby="projects-title">
+    <section class="section alt" id="certifications" aria-labelledby="certifications-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Credentials</p>
+          <h2 id="certifications-title">Certifications</h2>
+          <p>Certificates and official participation records.</p>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card">
+            <img class="cert-image" src="aws-academy-cloud-foundations.png" alt="AWS Academy Cloud Foundations certificate" loading="lazy">
+            <div class="cert-copy">
+              <h3>AWS Academy Cloud Foundations</h3>
+              <p>Trained · 2026</p>
+              <p class="meta">Amazon Web Services</p>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <img class="cert-image" src="redhat-openshift-podman.png" alt="Red Hat OpenShift Development I certificate" loading="lazy">
+            <div class="cert-copy">
+              <h3>OpenShift Development I</h3>
+              <p>Introduction to Containers with Podman</p>
+              <p class="meta">Red Hat Academy · Course attendance · 2026</p>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <img class="cert-image" src="certificate-techsynergy.jpg" alt="Techsynergy participation certificate" loading="lazy">
+            <div class="cert-copy">
+              <h3>Techsynergy Participation</h3>
+              <p>Participation certificate</p>
+              <p class="meta">Techsynergy</p>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <a href="image_2026-11-13_215254351.png" target="_blank" rel="noreferrer" aria-label="Open latest uploaded certificate in a new tab">
+              <img class="cert-image" src="image_2026-11-13_215254351.png" alt="Latest uploaded certificate" loading="lazy">
+            </a>
+            <div class="cert-copy">
+              <h3>Latest Uploaded Certificate</h3>
+              <p><a href="image_2026-11-13_215254351.png" target="_blank" rel="noreferrer">Open full certificate</a></p>
+              <p class="meta">Latest upload</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <div class="section-heading">
           <p class="section-kicker">Selected work</p>
